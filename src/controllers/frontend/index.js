@@ -4,8 +4,8 @@ export default class Index {
         "Codigo": 279,
         "Mes": "novembro/2021 "
     };
-    // url = 'https://converter.blog.br/Fipe/';
-    url = " https://localhost:44328/Fipe/";
+    url = 'https://converter.blog.br/Fipe/';
+    //url = " https://localhost:44328/Fipe/";
     marcas = null;
     modelos = null;
 
