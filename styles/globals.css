@@ -112,6 +112,75 @@ svg:not(:root) {
     margin: 16px auto 0px;
     padding: 32px 50px;
 }
+/*CSS: BREADCRUMB*/
+.MuiTypography-root {
+    margin: 0;
+    display: block;
+}
+.MuiTypography-body1 {
+    font-size: 16px;
+    font-family: Poppins, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.MuiTypography-colorTextSecondary {
+    color: rgba(0, 0, 0, 0.54);
+}
+.MuiBreadcrumbs-ol {
+    margin: 0;
+    display: flex;
+    padding: 0;
+    flex-wrap: wrap;
+    list-style: none;
+    align-items: center;
+}
+
+ol {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.MuiBreadcrumbs-li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    text-decoration: none;
+    
+}
+
+.breadcrumb-inicio {
+    color: rgb(117, 117, 117);
+    height: 26px;
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+    font-weight: 400;
+    line-height: 17px;
+}
+
+.MuiBreadcrumbs-separator {
+    display: flex;
+    margin-left: 8px;
+    user-select: none;
+    margin-right: 8px;
+    font-size: 11px;
+}
+
+.breadcrumb-links {
+    color: rgb(68, 67, 188);
+    height: 26px;
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+    font-weight: 400;
+    line-height: 17px;
+}
+
+/*CSS: BREADCRUMB*/
 
 .article-search .box .h2{
   color: rgb(68, 67, 188);
@@ -466,4 +535,158 @@ button:disabled {
 
 .consulte-tambem .links .link{
   color: #009A8A
+}
+
+
+/*section marcas*/
+.section-marcas{
+    position: static;
+    background-color: rgb(255, 255, 255);
+}
+
+.section-marcas article{
+    margin: 0px auto;
+    padding: 16px;
+    max-width: 1216px;
+}
+
+.section-marcas h2{
+    color: rgb(66, 66, 66);
+    text-align: center;
+     font-size: 16px;
+    margin-top: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    font-family: Poppins, Helvetica, Arial, sans-serif;
+}
+
+.section-marcas .busca {
+    top: 0px;
+    padding: 8px 0px;
+    z-index: 1100;
+    box-shadow: initial;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+}
+
+
+.section-marcas .busca input{
+    color: #424242;
+    border: 1px solid #E0E0E0;
+    overflow: hidden;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    width: 90%!important;
+}
+
+.lista-marcas{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+
+.lista-marcas > div {
+    width: 100% !important;
+    height: 100% !important;
+    overflow: visible; 
+    width: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.lista-marcas .marca {
+    height: 148px;
+    left: 0px;
+    top: 0px;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.lista-marcas .marca a {
+    width: 100%;
+    text-decoration: none;
+}
+
+.lista-marcas .marca .all {
+    width: 100%;
+    border: 1px solid rgb(255, 255, 255);
+    height: 100%;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    border-radius: 4px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.lista-marcas .marca .all > div{
+    overflow: hidden;
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    width: 74px;
+    height: 74px;
+}
+
+.lista-marcas .marca img{
+        position: absolute;
+    inset: 0px;
+    box-sizing: border-box;
+    padding: 0px;
+    border: none;
+    margin: auto;
+    display: block;
+    width: 0px;
+    height: 0px;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+
+
+
+/*section marcas*/
+
+@media (min-width: 960px){
+.section-marcas article {
+    padding: 40px 64px !important;
+    }
+
+    .section-marcas h2{
+    color: rgb(66, 66, 66);
+    font-size: 16px;
+    font-size: 34px;
+    margin-top: 24px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.section-marcas .busca {
+    width: initial;
+    position: initial;
+    transform: translateX(0px);
+}
+
+.section-marcas .busca2 {
+    width: 1008px;
+    margin: 40px auto 32px;
+}
+.section-marcas .mae-label {
+    height: 48px;
+}
+
+.section-marcas .busca label {
+    font-size: 16px;
+    transform: translate(12px, 18px);
+}
+
+.section-marcas .busca input{
+font-size: 16px;
+}
+
 }

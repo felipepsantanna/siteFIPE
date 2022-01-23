@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link'
 import Head from '/src/components/head';
 import Api from '/src/controllers/frontend';
 
@@ -9,6 +10,7 @@ export default function Home() {
   const [marcaVeiculo, setMarcaVeiculo] = useState(0);
   const [modeloVeiculo, setModeloVeiculo] = useState(0);
   const [anoVeiculo, setAnoVeiculo] = useState(0);
+  const [urlFIPE, setUrlFIPE] = useState("/");
 
   const [listaMarcaVeiculo, setListaMarcaVeiculo] = useState();
   const [listaModeloVeiculo, setListaModeloVeiculo] = useState();
@@ -34,10 +36,6 @@ export default function Home() {
 
     fetchMyAPI();
 
-
-
-
-
   }, []);
 
   const clean = async (e) => {
@@ -55,6 +53,9 @@ export default function Home() {
     document.getElementById('marcaVeiculo').value = 0;
     document.getElementById('modeloVeiculo').value = 0;
     document.getElementById('anoVeiculo').value = 0;
+
+    const button = document.getElementById('btnConsultarPreco');
+    button.classList.add('Mui-disabled');
   }
 
 
@@ -110,22 +111,29 @@ export default function Home() {
     const newModeloVeiculo = e.currentTarget.value;
     setModeloVeiculo(newModeloVeiculo);
 
-    let uniqueArr = [];
-    let auxArr = []
+    var filterModelos = allItens.filter(modelo => modelo.codigoModelo == newModeloVeiculo);
 
-    const filterModelos = await listaModeloVeiculo.filter(m => {
-      return (m.codigoModelo == newModeloVeiculo)
-    })
-
-    for (var i = 0; i < filterModelos.length; i++) {
-      if (!auxArr.includes(filterModelos.codigoAno)) {
-        auxArr.push(filterModelos.codigoAno);
-        uniqueArr.push(filterModelos[i]);
-      }
-    }
-
-    setListaAnoVeiculo(uniqueArr);
+    setListaAnoVeiculo(filterModelos);
     setDisabledAnoVeiculo(false);
+  }
+
+
+  const onAnoChange = async (e) => {
+
+    const button = document.getElementById('btnConsultarPreco');
+    button.classList.remove('Mui-disabled');
+
+    const marcaVeiculo = document.getElementById('marcaVeiculo');
+    const modeloVeiculo = document.getElementById('modeloVeiculo');
+
+
+    const labelMarca = marcaVeiculo.options[marcaVeiculo.selectedIndex].text;
+    const labelModelo = modeloVeiculo.options[modeloVeiculo.selectedIndex].text;
+    const labelAno = e.currentTarget.options[e.currentTarget.selectedIndex].text;
+    const api = new Api();
+    const urlPreco = await api.createURL(tipoVeiculo, labelMarca, labelModelo, labelAno)
+    console.log(urlPreco)
+    setUrlFIPE(urlPreco);
   }
 
 
@@ -197,21 +205,22 @@ export default function Home() {
                 }
               </select>
 
-              <select defaultValue={anoVeiculo} name="anoVeiculo" id="anoVeiculo" className="form-control" data-size="7" data-style="btn btn-simple btn-round" title="Ano Veiculo" disabled={disabledAnoVeiculo}>
+              <select defaultValue={anoVeiculo} name="anoVeiculo" id="anoVeiculo" className="form-control" data-size="7" data-style="btn btn-simple btn-round" title="Ano Veiculo" onChange={(e) => onAnoChange(e)} disabled={disabledAnoVeiculo}>
                 <option value="0" disabled>Ano e combustível</option>
                 {listaAnoVeiculo &&
                   listaAnoVeiculo.map((element) => {
-                    console.log(listaAnoVeiculo)
                     return <option key={element.codigoAno} value={element.codigoAno}>{element.labelAno}</option>
                   })
                 }
               </select>
             </div>
             <div className="consultarPrecos">
-              <button className="MuiButtonBase-root MuiButton-root jss290 MuiButton-contained jss291 MuiButton-fullWidth Mui-disabled" type="button" disabled="">
-                <span className="MuiButton-label">Consultar preço</span>
-                <span className="MuiTouchRipple-root"></span>
-              </button>
+              <Link href={urlFIPE}>
+                <a id="btnConsultarPreco" className="MuiButtonBase-root MuiButton-root jss290 MuiButton-contained jss291 MuiButton-fullWidth Mui-disabled" type="button" >
+                  <span className="MuiButton-label">Consultar preço</span>
+                  <span className="MuiTouchRipple-root"></span>
+                </a>
+              </Link>
             </div>
           </div>
 
@@ -221,11 +230,17 @@ export default function Home() {
           <div className="consulte-tambem">
             <p className="por">Consulte também por:</p>
             <div className="links">
-              <a className="link" href="/tabela-fipe/carros">Tabela Fipe Carros </a>
+              <Link href="/tabela-fipe/carros">
+                <a className="link">Tabela Fipe Carros </a>
+              </Link>
               <p className="espacos">,</p>
-              <a className="link" href="/tabela-fipe/motos">Tabela Fipe Motos </a>
+              <Link href="/tabela-fipe/motos">
+                <a className="link">Tabela Fipe Motos </a>
+              </Link>
               <p className="espacos">&nbsp;e</p>
-              <a className="link" href="/tabela-fipe/caminhoes">Tabela Fipe Caminhões </a>
+              <Link href="/tabela-fipe/caminhoes">
+                <a className="link">Tabela Fipe Caminhões </a>
+              </Link>
             </div>
           </div>
         </article>

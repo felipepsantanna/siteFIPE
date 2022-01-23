@@ -55,6 +55,32 @@ export default class Index {
             });
     }
 
+    async createURL(tipoVeiculo, labelMarca, labelModelo, labelAno) {
+        switch (tipoVeiculo) {
+            case 1:
+                tipoVeiculo = "carros";
+                break;
+            case 2:
+                tipoVeiculo = "motos";
+                break;
+            case 3:
+                tipoVeiculo = "caminhoes";
+                break;
+            default:
+                break;
+        }
+
+        const teste1 = this.NormalizeURL(labelModelo);
+        return "/" + tipoVeiculo + "/" + this.NormalizeURL(labelMarca) + "/" + this.NormalizeURL(labelModelo) + "/" + this.NormalizeURL(labelAno);
+    }
+
+    NormalizeURL(str) {
+        return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '') // Remove acentos
+            .replace(/([^\w]+|\s+)/g, '-') // Substitui espaço e outros caracteres por hífen
+            .replace(/\-\-+/g, '-')	// Substitui multiplos hífens por um único hífen
+            .replace(/(^-+|-+$)/, ''); // Remove hífens extras do final ou do inicio da string
+    }
+
     modelosTeste = [{ "codigoMesReferencia": 281, "mesReferencia": "Janeiro de 2020", "tipoVeiculo": 1, "codigoMarca": 2, "labelMarca": "Agrale", "codigoModelo": 4, "labelModelo": "MARRUÁ 2.8 12V 132cv TDI Diesel", "codigoAno": "2007-3", "labelAno": "2007 Diesel", "anoModelo": 2007, "combustivel": "Diesel", "codigoFIPE": "060001-6", "valor": "R$ 48.517,00" }, { "codigoMesReferencia": 281, "mesReferencia": "Janeiro de 2020", "tipoVeiculo": 1, "codigoMarca": 2, "labelMarca": "Agrale", "codigoModelo": 4, "labelModelo": "MARRUÁ 2.8 12V 132cv TDI Diesel", "codigoAno": "2006-3", "labelAno": "2006 Diesel", "anoModelo": 2006, "combustivel": "Diesel", "codigoFIPE": "060001-6", "valor": "R$ 44.317,00" }, { "codigoMesReferencia": 281, "mesReferencia": "Janeiro de 2020", "tipoVeiculo": 1, "codigoMarca": 2, "labelMarca": "Agrale", "codigoModelo": 4, "labelModelo": "MARRUÁ 2.8 12V 132cv TDI Diesel", "codigoAno": "2005-3", "labelAno": "2005 Diesel", "anoModelo": 2005, "combustivel": "Diesel", "codigoFIPE": "060001-6", "valor": "R$ 41.149,00" }, { "codigoMesReferencia": 281, "mesReferencia": "Janeiro de 2020", "tipoVeiculo": 1, "codigoMarca": 2, "labelMarca": "Agrale", "codigoModelo": 4, "labelModelo": "MARRUÁ 2.8 12V 132cv TDI Diesel", "codigoAno": "2004-3", "labelAno": "2004 Diesel", "anoModelo": 2004, "combustivel": "Diesel", "codigoFIPE": "060001-6", "valor": "R$ 38.022,00" }, { "codigoMesReferencia": 281, "mesReferencia": "Janeiro de 2020", "tipoVeiculo": 1, "codigoMarca": 2, "labelMarca": "Agrale", "codigoModelo": 4564, "labelModelo": "MARRUÁ AM 100 2.8  CS TDI Diesel", "codigoAno": "2015-3", "labelAno": "2015 Diesel", "anoModelo": 2015, "combustivel": "Diesel", "codigoFIPE": "060003-2", "valor": "R$ 109.335,00" }, { "codigoMesReferencia": 281, "mesReferencia": "Janeiro de 2020", "tipoVeiculo": 1, "codigoMarca": 2, "labelMarca": "Agrale", "codigoModelo": 4564, "labelModelo": "MARRUÁ AM 100 2.8  CS TDI Diesel", "codigoAno": "2014-3", "labelAno": "2014 Diesel", "anoModelo": 2014, "combustivel": "Diesel", "codigoFIPE": "060003-2", "valor": "R$ 105.149,00" }, {
         "codigoMesReferencia": 281, "mesReferencia": "Janeiro de 2020", "tipoVeiculo": 1, "codigoMarca": 2, "labelMarca": "Agrale", "codigoModelo": 4564, "labelModelo": "MARRUÁ AM 100 2.8  CS TDI Diesel", "codigoAno": "2013-3", "labelAno": "2013 Diesel", "anoModelo": 2013, "combustivel": "Diesel", "codigoFIPE": "060003-2", "valor": "R$ 101.864,00"
     }, { "codigoMesReferencia": 281, "mesReferencia": "Janeiro de 2020", "tipoVeiculo": 1, "codigoMarca": 2, "labelMarca": "Agrale", "codigoModelo": 4564, "labelModelo": "MARRUÁ AM 100 2.8  CS TDI Diesel", "codigoAno": "2012-3", "labelAno": "2012 Diesel", "anoModelo": 2012, "combustivel": "Diesel", "codigoFIPE": "060003-2", "valor": "R$ 98.767,00" }, { "codigoMesReferencia": 281, "mesReferencia": "Janeiro de 2020", "tipoVeiculo": 1, "codigoMarca": 2, "labelMarca": "Agrale", "codigoModelo": 4564, "labelModelo": "MARRUÁ AM 100 2.8  CS TDI Diesel", "codigoAno": "2011-3", "labelAno": "2011 Diesel", "anoModelo": 2011, "combustivel": "Diesel", "codigoFIPE": "060003-2", "valor": "R$ 68.867,00" }, { "codigoMesReferencia": 281, "mesReferencia": "Janeiro de 2020", "tipoVeiculo": 1, "codigoMarca": 2, "labelMarca": "Agrale", "codigoModelo": 4564, "labelModelo": "MARRUÁ AM 100 2.8  CS TDI Diesel", "codigoAno": "2010-3", "labelAno": "2010 Diesel", "anoModelo": 2010, "combustivel": "Diesel", "codigoFIPE": "060003-2", "valor": "R$ 52.934,00" }, { "codigoMesReferencia": 281, "mesReferencia": "Janeiro de 2020", "tipoVeiculo": 1, "codigoMarca": 2, "labelMarca": "Agrale", "codigoModelo": 4564, "labelModelo": "MARRUÁ AM 100 2.8  CS TDI Diesel", "codigoAno": "2009-3", "labelAno": "2009 Diesel", "anoModelo": 2009, "combustivel": "Diesel", "codigoFIPE": "060003-2", "valor": "R$ 46.780,00" }, { "codigoMesReferencia": 281, "mesReferencia": "Janeiro de 2020", "tipoVeiculo": 1, "codigoMarca": 2, "labelMarca": "Agrale", "codigoModelo": 4564, "labelModelo": "MARRUÁ AM 100 2.8  CS TDI Diesel", "codigoAno": "2008-3", "labelAno": "2008 Diesel", "anoModelo": 2008, "combustivel": "Diesel", "codigoFIPE": "060003-2", "valor": "R$ 44.988,00" }, { "codigoMesReferencia": 281, "mesReferencia": "Janeiro de 2020", "tipoVeiculo": 1, "codigoMarca": 2, "labelMarca": "Agrale", "codigoModelo": 4563, "labelModelo": "MARRUÁ AM 100 2.8 CD TDI Diesel", "codigoAno": "2015-3", "labelAno": "2015 Diesel", "anoModelo": 2015, "combustivel": "Diesel", "codigoFIPE": "060004-0", "valor": "R$ 122.916,00" }, { "codigoMesReferencia": 281, "mesReferencia": "Janeiro de 2020", "tipoVeiculo": 1, "codigoMarca": 2, "labelMarca": "Agrale", "codigoModelo": 4563, "labelModelo": "MARRUÁ AM 100 2.8 CD TDI Diesel", "codigoAno": "2014-3", "labelAno": "2014 Diesel", "anoModelo": 2014, "combustivel": "Diesel", "codigoFIPE": "060004-0", "valor": "R$ 118.339,00" }, {
