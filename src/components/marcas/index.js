@@ -1,9 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+import Api from '/src/controllers/frontend';
 
 
-export default function Marcas() {
+export default function Marcas({ tipoveiculo, listaMarcaVeiculo }) {
+    console.log(listaMarcaVeiculo)
+    const api = new Api();
     return (
         <React.Fragment>
             <section className="section-marcas">
@@ -20,90 +22,28 @@ export default function Marcas() {
 
                     <div className="lista-marcas">
                         <div>
-                            <div className="marca">
-                                <Link href="/carros/caoa-chery">
-                                    <a>
-                                        <div className="all">
-                                            <div>
-                                                <img alt="Caoa Cherry" src="/marcas/161.png" />
-                                            </div>
-                                            <p className="jss1170 jss2247">CAOA Chery</p>
-                                        </div>
-                                    </a>
-                                </Link>
-                            </div>
-                            <div className="marca">
-                                <Link href="/carros/caoa-chery">
-                                    <a>
-                                        <div className="all">
-                                            <div>
-                                                <img alt="Caoa Cherry" src="/marcas/161.png" />
-                                            </div>
-                                            <p className="jss1170 jss2247">CAOA Chery</p>
-                                        </div>
-                                    </a>
-                                </Link>
-                            </div>
-                            <div className="marca">
-                                <Link href="/carros/caoa-chery">
-                                    <a>
-                                        <div className="all">
-                                            <div>
-                                                <img alt="Caoa Cherry" src="/marcas/161.png" />
-                                            </div>
-                                            <p className="jss1170 jss2247">CAOA Chery</p>
-                                        </div>
-                                    </a>
-                                </Link>
-                            </div>
-                            <div className="marca">
-                                <Link href="/carros/caoa-chery">
-                                    <a>
-                                        <div className="all">
-                                            <div>
-                                                <img alt="Caoa Cherry" src="/marcas/161.png" />
-                                            </div>
-                                            <p className="jss1170 jss2247">CAOA Chery</p>
-                                        </div>
-                                    </a>
-                                </Link>
-                            </div>
-                            <div className="marca">
-                                <Link href="/carros/caoa-chery">
-                                    <a>
-                                        <div className="all">
-                                            <div>
-                                                <img alt="Caoa Cherry" src="/marcas/161.png" />
-                                            </div>
-                                            <p className="jss1170 jss2247">CAOA Chery</p>
-                                        </div>
-                                    </a>
-                                </Link>
-                            </div>
-                            <div className="marca">
-                                <Link href="/carros/caoa-chery">
-                                    <a>
-                                        <div className="all">
-                                            <div>
-                                                <img alt="Caoa Cherry" src="/marcas/161.png" />
-                                            </div>
-                                            <p className="jss1170 jss2247">CAOA Chery</p>
-                                        </div>
-                                    </a>
-                                </Link>
-                            </div>
-                            <div className="marca">
-                                <Link href="/carros/caoa-chery">
-                                    <a>
-                                        <div className="all">
-                                            <div>
-                                                <img alt="Caoa Cherry" src="/marcas/161.png" />
-                                            </div>
-                                            <p className="jss1170 jss2247">CAOA Chery</p>
-                                        </div>
-                                    </a>
-                                </Link>
-                            </div>
+
+
+                            {
+                                listaMarcaVeiculo && listaMarcaVeiculo.map(m => {
+                                    return <div key={m.Value} className="marca">
+                                        <Link href={"/carros/" + api.NormalizeURL(m.Label)}>
+                                            <a>
+                                                <div className="all">
+                                                    <div>
+                                                        <img alt={m.Label} src={"/marcas/" + m.Value + ".png"} />
+                                                    </div>
+                                                    <p className="jss1170 jss2247">{m.Label}</p>
+                                                </div>
+                                            </a>
+                                        </Link>
+                                    </div>
+                                })
+                            }
+
+
+
+
                         </div>
                     </div>
 

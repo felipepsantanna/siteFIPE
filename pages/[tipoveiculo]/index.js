@@ -190,7 +190,7 @@ export default function TipoVeiculo({ tipoVeiculo }) {
                 </article>
             </section>
 
-            <Marcas tipoveiculo={tipoVeiculo} />
+            <Marcas tipoveiculo={tipoVeiculo} listaMarcaVeiculo={listaMarcaVeiculo} />
         </div>
 
 
