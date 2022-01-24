@@ -4,7 +4,6 @@ import Api from '/src/controllers/frontend';
 
 
 export default function Marcas({ tipoveiculo, listaMarcaVeiculo }) {
-    console.log(listaMarcaVeiculo)
     const api = new Api();
     return (
         <React.Fragment>
@@ -31,7 +30,7 @@ export default function Marcas({ tipoveiculo, listaMarcaVeiculo }) {
                                             <a>
                                                 <div className="all">
                                                     <div>
-                                                        <img alt={m.Label} src={"/marcas/" + m.Value + ".png"} />
+                                                        <img alt={m.Label} src={"/marcas/" + m.Value + ".png"} onError={(e) => { e.target.onerror = null; e.target.src = "/marcas/default.png" }} />
                                                     </div>
                                                     <p className="jss1170 jss2247">{m.Label}</p>
                                                 </div>

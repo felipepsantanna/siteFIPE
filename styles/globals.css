@@ -19,6 +19,14 @@ section{
   display: block;
 }
 
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
 .headerWrapper{
   transition: all 0.3s ease 0s;
 
@@ -648,9 +656,21 @@ button:disabled {
 }
 
 
-
-
 /*section marcas*/
+
+.valor {
+    color: rgb(255, 255, 255);
+    width: fit-content;
+    text-align: center;
+    background-color: rgb(0, 154, 138);
+}
+
+.mes-referencia{
+    color: rgb(117, 117, 117);
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgb(0, 154, 138);
+}
 
 @media (min-width: 960px){
 .section-marcas article {
@@ -687,6 +707,22 @@ button:disabled {
 
 .section-marcas .busca input{
 font-size: 16px;
+}
+
+.valor {
+    margin: 32px auto 16px;
+    padding: 8px 24px;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 42px;
+    border-radius: 20px;
+}
+
+.mes-referencia {
+    font-size: 16px;
+    font-family: Poppins, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    line-height: 26px;
 }
 
 }
