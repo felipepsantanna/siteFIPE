@@ -51,11 +51,11 @@ export default function AnoCombustivel({ fipe }) {
 }
 
 export async function getServerSideProps(context) {
-
+    console.log(context.resolvedUrl)
     const api = new Api();
     await api.getUrlFipe(context.resolvedUrl);
     const fipe = api.Fipe[0];
-
+    console.log(fipe)
     return {
         props: {
             fipe
