@@ -51,9 +51,10 @@ export default function AnoCombustivel({ fipe }) {
 }
 
 export async function getServerSideProps(context) {
-    console.log(context.resolvedUrl)
+    const url = await Helper.createURL(context.params.tipoveiculo, context.params.marca, context.params.modelo, context.params.anocombustivel)
     const api = new Api();
-    await api.getUrlFipe(context.resolvedUrl);
+    await api.getUrlFipe(url);
+    console.log(url);
     const fipe = api.Fipe[0];
     console.log(fipe)
     return {
