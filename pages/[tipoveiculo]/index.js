@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Api from '/src/controllers/frontend';
 import Marcas from '/src/components/marcas';
 import Header from '/src/components/header';
+import Helper from '/src/controllers/helper';
 
 
 export default function TipoVeiculo({ tipoVeiculo }) {
@@ -101,8 +102,7 @@ export default function TipoVeiculo({ tipoVeiculo }) {
         const labelMarca = marcaVeiculo.options[marcaVeiculo.selectedIndex].text;
         const labelModelo = modeloVeiculo.options[modeloVeiculo.selectedIndex].text;
         const labelAno = e.currentTarget.options[e.currentTarget.selectedIndex].text;
-        const api = new Api();
-        const urlPreco = await api.createURL(tipoVeiculo, labelMarca, labelModelo, labelAno)
+        const urlPreco = await Helper.createURL(tipoVeiculo, labelMarca, labelModelo, labelAno)
         setUrlFIPE(urlPreco);
     }
 
@@ -207,12 +207,7 @@ export default function TipoVeiculo({ tipoVeiculo }) {
 
 export async function getServerSideProps(context) {
 
-    const dePara = {
-        carros: 1,
-        motos: 2,
-        caminhoes: 3
-    }
-    const tipoVeiculo = dePara[context.params.tipoveiculo];
+    const tipoVeiculo = Helper.IDTipoVeiculo(context.params.tipoveiculo);
 
     return {
         props: {

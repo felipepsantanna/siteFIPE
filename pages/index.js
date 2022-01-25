@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Head from '/src/components/head';
 import Api from '/src/controllers/frontend';
 import Header from '/src/components/header';
+import Helper from '/src/controllers/helper';
 
 export default function Home() {
 
@@ -131,8 +132,7 @@ export default function Home() {
     const labelMarca = marcaVeiculo.options[marcaVeiculo.selectedIndex].text;
     const labelModelo = modeloVeiculo.options[modeloVeiculo.selectedIndex].text;
     const labelAno = e.currentTarget.options[e.currentTarget.selectedIndex].text;
-    const api = new Api();
-    const urlPreco = await api.createURL(tipoVeiculo, labelMarca, labelModelo, labelAno)
+    const urlPreco = await Helper.createURL(tipoVeiculo, labelMarca, labelModelo, labelAno)
     setUrlFIPE(urlPreco);
   }
 

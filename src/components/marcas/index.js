@@ -1,10 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
-import Api from '/src/controllers/frontend';
+import Helper from '/src/controllers/helper';
 
 
 export default function Marcas({ tipoveiculo, listaMarcaVeiculo }) {
-    const api = new Api();
+
     return (
         <React.Fragment>
             <section className="section-marcas">
@@ -26,7 +26,7 @@ export default function Marcas({ tipoveiculo, listaMarcaVeiculo }) {
                             {
                                 listaMarcaVeiculo && listaMarcaVeiculo.map(m => {
                                     return <div key={m.Value} className="marca">
-                                        <Link href={"/carros/" + api.NormalizeURL(m.Label)}>
+                                        <Link href={"/carros/" + Helper.NormalizeURL(m.Label)}>
                                             <a>
                                                 <div className="all">
                                                     <div>

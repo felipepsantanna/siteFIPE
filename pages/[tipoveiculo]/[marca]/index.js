@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '/src/components/header';
+import Helper from '/src/controllers/helper';
 
 export default function AnoCombustivel({ tipoVeiculo, marca }) {
     return <React.Fragment>
@@ -10,13 +11,7 @@ export default function AnoCombustivel({ tipoVeiculo, marca }) {
 
 export async function getServerSideProps(context) {
 
-
-    const dePara = {
-        carros: 1,
-        motos: 2,
-        caminhoes: 3
-    }
-    const tipoVeiculo = dePara[context.params.tipoveiculo];
+    const tipoVeiculo = Helper.IDTipoVeiculo(context.params.tipoveiculo);
     const marca = context.params.marca;
 
     return {

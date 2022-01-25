@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '/src/components/header';
 import Api from '/src/controllers/frontend';
+import Helper from '/src/controllers/helper';
 
 export default function AnoCombustivel({ fipe }) {
     return <React.Fragment>
@@ -20,7 +21,7 @@ export default function AnoCombustivel({ fipe }) {
                             </li>
                             <li aria-hidden="true" className="MuiBreadcrumbs-separator">/</li>
                             <li className="MuiBreadcrumbs-li">
-                                <div className="breadcrumb-links">{fipe.tipoVeiculo}</div>
+                                <div className="breadcrumb-links">{Helper.LabelTipoVeiculo(fipe.tipoVeiculo)}</div>
                             </li>
                             <li aria-hidden="true" className="MuiBreadcrumbs-separator">/</li>
                             <li className="MuiBreadcrumbs-li">
