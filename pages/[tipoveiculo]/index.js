@@ -103,7 +103,6 @@ export default function TipoVeiculo({ tipoVeiculo }) {
         const labelAno = e.currentTarget.options[e.currentTarget.selectedIndex].text;
         const api = new Api();
         const urlPreco = await api.createURL(tipoVeiculo, labelMarca, labelModelo, labelAno)
-        console.log(urlPreco)
         setUrlFIPE(urlPreco);
     }
 
@@ -207,7 +206,6 @@ export default function TipoVeiculo({ tipoVeiculo }) {
 
 
 export async function getServerSideProps(context) {
-    console.log(context.params);
 
     const dePara = {
         carros: 1,

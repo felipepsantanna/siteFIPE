@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Header from '/src/components/header';
 
 export default function AnoCombustivel({ tipoVeiculo, marca }) {
     return <React.Fragment>
@@ -9,7 +9,6 @@ export default function AnoCombustivel({ tipoVeiculo, marca }) {
 
 
 export async function getServerSideProps(context) {
-    console.log(context.params);
 
 
     const dePara = {

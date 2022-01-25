@@ -133,7 +133,6 @@ export default function Home() {
     const labelAno = e.currentTarget.options[e.currentTarget.selectedIndex].text;
     const api = new Api();
     const urlPreco = await api.createURL(tipoVeiculo, labelMarca, labelModelo, labelAno)
-    console.log(urlPreco)
     setUrlFIPE(urlPreco);
   }
 

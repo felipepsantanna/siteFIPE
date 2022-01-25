@@ -1,7 +1,8 @@
 import React from 'react';
 import Header from '/src/components/header';
+import Api from '/src/controllers/frontend';
 
-export default function AnoCombustivel() {
+export default function AnoCombustivel({ fipe }) {
     return <React.Fragment>
         <Header />
 
@@ -19,32 +20,45 @@ export default function AnoCombustivel() {
                             </li>
                             <li aria-hidden="true" className="MuiBreadcrumbs-separator">/</li>
                             <li className="MuiBreadcrumbs-li">
-                                <div className="breadcrumb-links">Carros</div>
+                                <div className="breadcrumb-links">{fipe.tipoVeiculo}</div>
                             </li>
                             <li aria-hidden="true" className="MuiBreadcrumbs-separator">/</li>
                             <li className="MuiBreadcrumbs-li">
-                                <div className="breadcrumb-links">Renault</div>
+                                <div className="breadcrumb-links">{fipe.labelMarca}</div>
                             </li>
                             <li aria-hidden="true" className="MuiBreadcrumbs-separator">/</li>
                             <li className="MuiBreadcrumbs-li">
-                                <div className="breadcrumb-links">Clio</div>
+                                <div className="breadcrumb-links">{fipe.labelModelo}</div>
                             </li>
                             <li aria-hidden="true" className="MuiBreadcrumbs-separator">/</li>
                             <li className="MuiBreadcrumbs-li">
-                                <div className="breadcrumb-links">2012 Gasolina</div>
+                                <div className="breadcrumb-links">{fipe.labelAno}</div>
                             </li>
                         </ol>
                     </nav>
 
-                    <h1 className="h1">Tabela Fipe Renault Clio 2012 Gasolina</h1>
+                    <h1 className="h1">Tabela Fipe {fipe.labelMarca} {fipe.labelModelo} {fipe.labelAno}</h1>
                     <h2 className="h2">Este é o preço de compra do veículo</h2>
 
-                    <p className="valor">R$&nbsp;55.460</p>
-                    <p className="mes-referencia">Mês de referência: Janeiro de 2022</p>
+                    <p className="valor">{fipe.valor}</p>
+                    <p className="mes-referencia">Mês de referência: {fipe.mesReferencia}</p>
 
                 </article>
             </section>
         </div>
     </React.Fragment>
+}
+
+export async function getServerSideProps(context) {
+
+    const api = new Api();
+    await api.getUrlFipe(context.resolvedUrl);
+    const fipe = api.Fipe[0];
+
+    return {
+        props: {
+            fipe
+        }
+    }
 }
 

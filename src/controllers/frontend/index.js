@@ -8,6 +8,7 @@ export default class Index {
     //url = " https://localhost:44328/Fipe/";
     marcas = null;
     modelos = null;
+    Fipe = null;
 
 
     async getMesReferencia() {
@@ -55,6 +56,21 @@ export default class Index {
             });
     }
 
+    async getUrlFipe(url) {
+        var urlAPI = new URL(`${this.url}BuscaURL?url=${url}`);
+        const _Fipe = await fetch(urlAPI)
+            .then(response => {
+                return response.json();
+            })
+            .then(json => {
+                this.Fipe = json;
+            })
+            .catch((error) => {
+                console.log('error: ' + error);
+                return error;
+            });
+    }
+
     async createURL(tipoVeiculo, labelMarca, labelModelo, labelAno) {
         switch (tipoVeiculo) {
             case 1:
@@ -69,9 +85,7 @@ export default class Index {
             default:
                 break;
         }
-
-        const teste1 = this.NormalizeURL(labelModelo);
-        return "/" + tipoVeiculo + "/" + this.NormalizeURL(labelMarca) + "/" + this.NormalizeURL(labelModelo) + "/" + this.NormalizeURL(labelAno);
+        return ("/" + tipoVeiculo + "/" + this.NormalizeURL(labelMarca) + "/" + this.NormalizeURL(labelModelo) + "/" + this.NormalizeURL(labelAno)).toLowerCase();
     }
 
     NormalizeURL(str) {
