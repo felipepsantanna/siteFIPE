@@ -1,8 +1,8 @@
 export default class Index {
 
     mesReferencia = {
-        "Codigo": 279,
-        "Mes": "novembro/2021 "
+        "Codigo": 281,
+        "Mes": "Janeiro/2022 "
     };
     url = 'https://converter.blog.br/Fipe/';
     //url = " https://localhost:44328/Fipe/";

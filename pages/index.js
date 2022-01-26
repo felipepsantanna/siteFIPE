@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link'
+import Link from 'next/link';
 import Head from '/src/components/head';
 import Api from '/src/controllers/frontend';
 import Header from '/src/components/header';

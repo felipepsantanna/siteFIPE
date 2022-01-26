@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import Header from '/src/components/header';
 import Api from '/src/controllers/frontend';
 import Helper from '/src/controllers/helper';
@@ -15,21 +16,35 @@ export default function AnoCombustivel({ fipe }) {
                     <nav className="MuiTypography-root MuiBreadcrumbs-root MuiTypography-body1 MuiTypography-colorTextSecondary">
                         <ol className="MuiBreadcrumbs-ol">
                             <li className="MuiBreadcrumbs-li">
-                                <a href="https://www.mobiauto.com.br/">
-                                    <div className="breadcrumb-inicio">Início</div>
-                                </a>
+                                <Link href="/">
+                                    <a>
+                                        <div className="breadcrumb-inicio">Início</div>
+                                    </a>
+                                </Link>
                             </li>
                             <li aria-hidden="true" className="MuiBreadcrumbs-separator">/</li>
                             <li className="MuiBreadcrumbs-li">
-                                <div className="breadcrumb-links">{Helper.LabelTipoVeiculo(fipe.tipoVeiculo)}</div>
+                                <Link href={"/" + Helper.LabelTipoVeiculo(fipe.tipoVeiculo).toLowerCase()}>
+                                    <a>
+                                        <div className="breadcrumb-links">{Helper.LabelTipoVeiculo(fipe.tipoVeiculo)}</div>
+                                    </a>
+                                </Link>
                             </li>
                             <li aria-hidden="true" className="MuiBreadcrumbs-separator">/</li>
                             <li className="MuiBreadcrumbs-li">
-                                <div className="breadcrumb-links">{fipe.labelMarca}</div>
+                                <Link href={"/" + Helper.LabelTipoVeiculo(fipe.tipoVeiculo).toLowerCase() + "/" + Helper.NormalizeURL(fipe.labelMarca).toLowerCase()}>
+                                    <a>
+                                        <div className="breadcrumb-links">{fipe.labelMarca}</div>
+                                    </a>
+                                </Link>
                             </li>
                             <li aria-hidden="true" className="MuiBreadcrumbs-separator">/</li>
                             <li className="MuiBreadcrumbs-li">
-                                <div className="breadcrumb-links">{fipe.labelModelo}</div>
+                                <Link href={"/" + Helper.LabelTipoVeiculo(fipe.tipoVeiculo).toLowerCase() + "/" + Helper.NormalizeURL(fipe.labelMarca).toLowerCase() + "/" + Helper.NormalizeURL(fipe.labelModelo).toLowerCase()}>
+                                    <a>
+                                        <div className="breadcrumb-links">{fipe.labelModelo}</div>
+                                    </a>
+                                </Link>
                             </li>
                             <li aria-hidden="true" className="MuiBreadcrumbs-separator">/</li>
                             <li className="MuiBreadcrumbs-li">
@@ -54,9 +69,9 @@ export async function getServerSideProps(context) {
     const url = await Helper.createURL(context.params.tipoveiculo, context.params.marca, context.params.modelo, context.params.anocombustivel)
     const api = new Api();
     await api.getUrlFipe(url);
-    console.log(url);
+
     const fipe = api.Fipe[0];
-    console.log(fipe)
+
     return {
         props: {
             fipe
