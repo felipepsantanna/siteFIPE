@@ -695,6 +695,8 @@ button:disabled {
     box-sizing: border-box;
     list-style: none;
     justify-content: center;
+    padding: 8px;
+    width: 100%;
 }
 
 .lista-modelos li a{
@@ -733,12 +735,12 @@ button:disabled {
 }
 
 .item-modelo .item-modelo-img > div{
-        overflow: hidden;
+    overflow: hidden;
     box-sizing: border-box;
     display: inline-block;
     position: relative;
-    width: 116px;
-    height: 56px;
+    width: 82px;
+    height: 40px;
 }
 
 .item-modelo .item-modelo-img img{
@@ -758,9 +760,36 @@ button:disabled {
     object-fit: cover;
 }
 
+.logo-marca{
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+}
+
+
+@media (min-width: 1170px){
+.lista-modelos li{
+    width: calc(33.3333%);
+    height: 122px;
+    padding: 16px;
+}
+
+.item-modelo .item-modelo-marca p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
+}
+
+.item-modelo .item-modelo-img > div{
+  
+    width: 116px;
+    height: 56px;
+}
+
+}
    
 
-@media (min-width: 960px){
+@media (min-width: 960px) and (max-width: 1170px){
 .section-marcas article {
     padding: 40px 64px !important;
     }
@@ -824,9 +853,19 @@ font-size: 16px;
 }
 
 .item-modelo .item-modelo-marca p{
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 26px;
+    font-size: 14px;
+    line-height: 16px;
 }
 
+
+.logo-marca {
+    height: 110px;
+}
+
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+.lista-modelos li{
+    width: calc(50%);
+}
 }

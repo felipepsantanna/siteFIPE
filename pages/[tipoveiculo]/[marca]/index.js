@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link'
+import Link from 'next/link';
+import Image from 'next/image';
 import Api from '/src/controllers/frontend';
 import Modelos from '/src/components/modelos';
 import Header from '/src/components/header';
@@ -37,6 +38,16 @@ export default function AnoCombustivel({ IDtipoVeiculo, labelTipoVeiculo, labelM
                             </li>
                         </ol>
                     </nav>
+
+                    <div className="logo-marca">
+                        <Image
+
+                            src="/marcas/1.png"
+                            alt={labelMarca}
+                            width={110}
+                            height={110}
+                        />
+                    </div>
 
                     <h1 className="h1">Tabela Fipe {labelMarca} </h1>
                     <h2 className="h2">Consulte o preço de carros novos e usados da {labelMarca}</h2>
