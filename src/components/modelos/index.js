@@ -20,7 +20,7 @@ export default function Modelos({ listaModelos }) {
                                         </div>
                                         <div className="item-modelo-img">
                                             <div>
-                                                <img alt={m.labelModelo} src="/marcas/default.png" />
+                                                <img alt={m.labelModelo} src="/carros.png" />
                                             </div>
                                         </div>
                                     </div>

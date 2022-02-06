@@ -52,7 +52,7 @@ export default function AnoCombustivel({ IDtipoVeiculo, labelTipoVeiculo, labelM
                     <h1 className="h1">Tabela Fipe {labelMarca} </h1>
                     <h2 className="h2">Consulte o preço de carros novos e usados da {labelMarca}</h2>
 
-                    <Modelos listaModelos={listaModelos} />
+                    <Modelos listaModelos={listaModelos} labelTipoVeiculo={labelTipoVeiculo} />
 
                 </article>
             </section>
@@ -71,10 +71,12 @@ export async function getServerSideProps(context) {
     await api.getModelos(api.mesReferencia.Codigo, IDtipoVeiculo, 23);
     let listaModelos = [];
     let auxArr = []
-    for (var i = 0; i < api.modelos.length; i++) {
-        if (!auxArr.includes(api.modelos[i].codigoModelo)) {
-            auxArr.push(api.modelos[i].codigoModelo);
-            listaModelos.push(api.modelos[i]);
+    if (api.modelos) {
+        for (var i = 0; i < api.modelos.length; i++) {
+            if (!auxArr.includes(api.modelos[i].codigoModelo)) {
+                auxArr.push(api.modelos[i].codigoModelo);
+                listaModelos.push(api.modelos[i]);
+            }
         }
     }
 

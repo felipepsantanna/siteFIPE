@@ -37,6 +37,11 @@ ul{
     padding-inline-start: 40px;
 }
 
+.lista-marcas .marca .all span{
+    position: initial!important;
+}                                                  
+
+
 .headerWrapper{
   transition: all 0.3s ease 0s;
 
@@ -768,104 +773,103 @@ button:disabled {
 
 
 @media (min-width: 1170px){
-.lista-modelos li{
-    width: calc(33.3333%);
-    height: 122px;
-    padding: 16px;
-}
+    .lista-modelos li{
+        width: calc(33.3333%);
+        height: 122px;
+        padding: 16px;
+    }
 
-.item-modelo .item-modelo-marca p{
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 26px;
-}
+    .item-modelo .item-modelo-marca p{
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 26px;
+    }
 
-.item-modelo .item-modelo-img > div{
-  
-    width: 116px;
-    height: 56px;
-}
-
+    .item-modelo .item-modelo-img > div{
+    
+        width: 116px;
+        height: 56px;
+    }
 }
    
 
 @media (min-width: 960px) and (max-width: 1170px){
-.section-marcas article {
-    padding: 40px 64px !important;
+    .section-marcas article {
+        padding: 40px 64px !important;
+        }
+
+        .section-marcas h2{
+        color: rgb(66, 66, 66);
+        font-size: 16px;
+        font-size: 34px;
+        margin-top: 24px;
+        font-weight: 400;
+        line-height: 26px;
     }
 
-    .section-marcas h2{
-    color: rgb(66, 66, 66);
+    .section-marcas .busca {
+        width: initial;
+        position: initial;
+        transform: translateX(0px);
+    }
+
+    .section-marcas .busca2 {
+        width: 1008px;
+        margin: 40px auto 32px;
+    }
+    .section-marcas .mae-label {
+        height: 48px;
+    }
+
+    .section-marcas .busca label {
+        font-size: 16px;
+        transform: translate(12px, 18px);
+    }
+
+    .section-marcas .busca input{
     font-size: 16px;
-    font-size: 34px;
-    margin-top: 24px;
-    font-weight: 400;
-    line-height: 26px;
-}
+    }
 
-.section-marcas .busca {
-    width: initial;
-    position: initial;
-    transform: translateX(0px);
-}
+    .valor {
+        margin: 32px auto 16px;
+        padding: 8px 24px;
+        font-size: 34px;
+        font-weight: 700;
+        line-height: 42px;
+        border-radius: 20px;
+    }
 
-.section-marcas .busca2 {
-    width: 1008px;
-    margin: 40px auto 32px;
-}
-.section-marcas .mae-label {
-    height: 48px;
-}
+    .mes-referencia {
+        font-size: 16px;
+        font-family: Poppins, Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        line-height: 26px;
+    }
 
-.section-marcas .busca label {
-    font-size: 16px;
-    transform: translate(12px, 18px);
-}
+    .lista-modelos{
+        margin: 0px auto;
+    }
 
-.section-marcas .busca input{
-font-size: 16px;
-}
+    .lista-modelos li{
+        width: calc(33.3333%);
+        height: 122px;
+        padding: 16px;
+    }
 
-.valor {
-    margin: 32px auto 16px;
-    padding: 8px 24px;
-    font-size: 34px;
-    font-weight: 700;
-    line-height: 42px;
-    border-radius: 20px;
-}
-
-.mes-referencia {
-    font-size: 16px;
-    font-family: Poppins, Helvetica, Arial, sans-serif;
-    font-weight: 400;
-    line-height: 26px;
-}
-
-.lista-modelos{
-    margin: 0px auto;
-}
-
-.lista-modelos li{
-    width: calc(33.3333%);
-    height: 122px;
-    padding: 16px;
-}
-
-.item-modelo .item-modelo-marca p{
-    font-size: 14px;
-    line-height: 16px;
-}
+    .item-modelo .item-modelo-marca p{
+        font-size: 14px;
+        line-height: 16px;
+    }
 
 
-.logo-marca {
-    height: 110px;
-}
+    .logo-marca {
+        height: 110px;
+    }
 
 }
 
 @media (min-width: 640px) and (max-width: 960px) {
-.lista-modelos li{
-    width: calc(50%);
-}
+    .lista-modelos li{
+        width: calc(50%);
+    }
 }

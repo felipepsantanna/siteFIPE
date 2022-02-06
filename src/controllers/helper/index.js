@@ -36,6 +36,10 @@ const Helper = {
             .replace(/([^\w]+|\s+)/g, '-') // Substitui espaço e outros caracteres por hífen
             .replace(/\-\-+/g, '-')	// Substitui multiplos hífens por um único hífen
             .replace(/(^-+|-+$)/, ''); // Remove hífens extras do final ou do inicio da string
+    },
+
+    CapitalizeFirstLetter(str) {
+        return str.charAt(0).toUpperCase() + str.slice(1);
     }
 }
 

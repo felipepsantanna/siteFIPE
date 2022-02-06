@@ -1,21 +1,47 @@
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link'
+import Link from 'next/link';
 import Api from '/src/controllers/frontend';
 import Marcas from '/src/components/marcas';
 import Header from '/src/components/header';
+import Consulte from '/src/components/consultetambem';
 import Helper from '/src/controllers/helper';
 
+export async function getServerSideProps(context) {
 
-export default function TipoVeiculo({ tipoVeiculo }) {
+    const tipoVeiculo = Helper.IDTipoVeiculo(context.params.tipoveiculo);
+    const labelTipoVeiculo = context.params.tipoveiculo;
 
-    const [mesReferencia, setMesReferencia] = useState();
+    console.log('tipoVeiculo: ' + tipoVeiculo);
+    console.log('labelTipoVeiculo: ' + labelTipoVeiculo);
+
+    const api = new Api();
+    await api.getMesReferencia();
+
+    await api.getMarcas(api.mesReferencia.Codigo, tipoVeiculo);
+    const codigoMesReferencia = api.mesReferencia.Codigo;
+
+    const marcas = api.marcas;
+
+    return {
+        props: {
+            tipoVeiculo,
+            labelTipoVeiculo,
+            codigoMesReferencia,
+            marcas
+        }
+    }
+}
+
+export default function TipoVeiculo({ tipoVeiculo, labelTipoVeiculo, codigoMesReferencia, marcas }) {
+
+    const [mesReferencia, setMesReferencia] = useState(codigoMesReferencia);
     const [codigoTipoVeiculo, setCodigoTipoVeiculo] = useState(tipoVeiculo);
     const [marcaVeiculo, setMarcaVeiculo] = useState(0);
     const [modeloVeiculo, setModeloVeiculo] = useState(0);
     const [anoVeiculo, setAnoVeiculo] = useState(0);
     const [urlFIPE, setUrlFIPE] = useState("/");
 
-    const [listaMarcaVeiculo, setListaMarcaVeiculo] = useState();
+    const [listaMarcaVeiculo, setListaMarcaVeiculo] = useState(marcas);
     const [listaModeloVeiculo, setListaModeloVeiculo] = useState();
     const [listaAnoVeiculo, setListaAnoVeiculo] = useState();
 
@@ -25,19 +51,10 @@ export default function TipoVeiculo({ tipoVeiculo }) {
 
     const [allItens, setAllItens] = useState();
 
+
     useEffect(() => {
 
-        async function fetchMyAPI() {
-            const api = new Api();
-            await api.getMesReferencia();
-
-            setMesReferencia(api.mesReferencia);
-            await api.getMarcas(api.mesReferencia.Codigo, codigoTipoVeiculo);
-            setListaMarcaVeiculo(api.marcas);
-
-        }
-
-        fetchMyAPI();
+        setListaMarcaVeiculo(marcas);
 
 
     }, []);
@@ -119,13 +136,15 @@ export default function TipoVeiculo({ tipoVeiculo }) {
                     <nav className="MuiTypography-root MuiBreadcrumbs-root MuiTypography-body1 MuiTypography-colorTextSecondary">
                         <ol className="MuiBreadcrumbs-ol">
                             <li className="MuiBreadcrumbs-li">
-                                <a href="https://www.mobiauto.com.br/">
-                                    <div className="breadcrumb-inicio">Início</div>
-                                </a>
+                                <Link href="/">
+                                    <a>
+                                        <div className="breadcrumb-inicio">Tabela Fipe</div>
+                                    </a>
+                                </Link>
                             </li>
                             <li aria-hidden="true" className="MuiBreadcrumbs-separator">/</li>
                             <li className="MuiBreadcrumbs-li">
-                                <div className="breadcrumb-links">Tabela Fipe Carros</div>
+                                <div className="breadcrumb-links">Tabela Fipe {Helper.CapitalizeFirstLetter(labelTipoVeiculo)}</div>
                             </li>
                         </ol>
                     </nav>
@@ -178,26 +197,11 @@ export default function TipoVeiculo({ tipoVeiculo }) {
 
 
 
-                    <div className="consulte-tambem">
-                        <p className="por">Consulte também por:</p>
-                        <div className="links">
-                            <Link href="/carros">
-                                <a className="link">Tabela Fipe Carros </a>
-                            </Link>
-                            <p className="espacos">,</p>
-                            <Link href="/motos">
-                                <a className="link">Tabela Fipe Motos </a>
-                            </Link>
-                            <p className="espacos">&nbsp;e</p>
-                            <Link href="/caminhoes">
-                                <a className="link">Tabela Fipe Caminhões </a>
-                            </Link>
-                        </div>
-                    </div>
+                    <Consulte />
                 </article>
             </section>
 
-            <Marcas tipoveiculo={tipoVeiculo} listaMarcaVeiculo={listaMarcaVeiculo} />
+            <Marcas labelTipoVeiculo={labelTipoVeiculo} listaMarcaVeiculo={listaMarcaVeiculo} />
         </div>
 
 
@@ -205,13 +209,3 @@ export default function TipoVeiculo({ tipoVeiculo }) {
 }
 
 
-export async function getServerSideProps(context) {
-
-    const tipoVeiculo = Helper.IDTipoVeiculo(context.params.tipoveiculo);
-
-    return {
-        props: {
-            tipoVeiculo
-        }
-    }
-}

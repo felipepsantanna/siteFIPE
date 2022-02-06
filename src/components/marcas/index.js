@@ -1,9 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import Helper from '/src/controllers/helper';
+import ImageHelper from '/src/controllers/helper/img';
 
 
-export default function Marcas({ tipoveiculo, listaMarcaVeiculo }) {
+export default function Marcas({ labelTipoVeiculo, listaMarcaVeiculo }) {
 
     return (
         <React.Fragment>
@@ -26,12 +28,19 @@ export default function Marcas({ tipoveiculo, listaMarcaVeiculo }) {
                             {
                                 listaMarcaVeiculo && listaMarcaVeiculo.map(m => {
                                     return <div key={m.Value} className="marca">
-                                        <Link href={"/carros/" + Helper.NormalizeURL(m.Label)}>
+                                        <Link href={"/" + labelTipoVeiculo + "/" + Helper.NormalizeURL(m.Label)}>
                                             <a>
                                                 <div className="all">
                                                     <div>
-                                                        <img alt={m.Label} src={"/marcas/" + m.Value + ".png"} onError={(e) => { e.target.onerror = null; e.target.src = "/marcas/default.png" }} />
+                                                        <Image
+                                                            src={ImageHelper.LogoDasMarcas(m.Value, labelTipoVeiculo)}
+                                                            alt={m.Label}
+                                                            width={96}
+                                                            height={96}
+                                                        />
+
                                                     </div>
+
                                                     <p className="jss1170 jss2247">{m.Label}</p>
                                                 </div>
                                             </a>
@@ -39,7 +48,6 @@ export default function Marcas({ tipoveiculo, listaMarcaVeiculo }) {
                                     </div>
                                 })
                             }
-
 
 
 
