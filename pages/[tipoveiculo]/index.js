@@ -11,14 +11,11 @@ export async function getServerSideProps(context) {
     const tipoVeiculo = Helper.IDTipoVeiculo(context.params.tipoveiculo);
     const labelTipoVeiculo = context.params.tipoveiculo;
 
-    console.log('tipoVeiculo: ' + tipoVeiculo);
-    console.log('labelTipoVeiculo: ' + labelTipoVeiculo);
-
     const api = new Api();
     await api.getMesReferencia();
 
     await api.getMarcas(api.mesReferencia.Codigo, tipoVeiculo);
-    const codigoMesReferencia = api.mesReferencia.Codigo;
+    const baseMesReferencia = api.mesReferencia;
 
     const marcas = api.marcas;
 
@@ -26,15 +23,15 @@ export async function getServerSideProps(context) {
         props: {
             tipoVeiculo,
             labelTipoVeiculo,
-            codigoMesReferencia,
+            baseMesReferencia,
             marcas
         }
     }
 }
 
-export default function TipoVeiculo({ tipoVeiculo, labelTipoVeiculo, codigoMesReferencia, marcas }) {
+export default function TipoVeiculo({ tipoVeiculo, labelTipoVeiculo, baseMesReferencia, marcas }) {
 
-    const [mesReferencia, setMesReferencia] = useState(codigoMesReferencia);
+    const [mesReferencia, setMesReferencia] = useState(baseMesReferencia);
     const [codigoTipoVeiculo, setCodigoTipoVeiculo] = useState(tipoVeiculo);
     const [marcaVeiculo, setMarcaVeiculo] = useState(0);
     const [modeloVeiculo, setModeloVeiculo] = useState(0);
@@ -81,6 +78,7 @@ export default function TipoVeiculo({ tipoVeiculo, labelTipoVeiculo, codigoMesRe
         const newMarcaVeiculo = e.currentTarget.value;
         setMarcaVeiculo(newMarcaVeiculo);
         const api = new Api();
+
         await api.getModelos(mesReferencia.Codigo, tipoVeiculo, newMarcaVeiculo);
         setAllItens(api.modelos);
 
