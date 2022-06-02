@@ -4,7 +4,7 @@ export default class Index {
         "Codigo": 281,
         "Mes": "Janeiro/2022 "
     };
-    url = 'https://converter.blog.br/Fipe/';
+    url = 'https://api.rocktools.com.br/Fipe/';
     //url = " https://localhost:44328/Fipe/";
     marcas = null;
     modelos = null;
