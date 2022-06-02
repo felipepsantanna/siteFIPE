@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Link from 'next/link';
 
 
 export default function ConsulteTambem() {
@@ -8,17 +8,18 @@ export default function ConsulteTambem() {
             <div className="consulte-tambem">
                 <p className="por">Consulte também por:</p>
                 <div className="links">
-
-                    <a href="/carros" className="link">Tabela Fipe Carros </a>
-
+                    <Link href="/carros">
+                        <a className="link">Tabela Fipe Carros </a>
+                    </Link>
                     <p className="espacos">,</p>
 
-                    <a href="/motos" className="link">Tabela Fipe Motos </a>
-
+                    <Link href="/motos">
+                        <a className="link">Tabela Fipe Motos </a>
+                    </Link>
                     <p className="espacos">&nbsp;e</p>
-
-                    <a href="/caminhoes" className="link">Tabela Fipe Caminhões </a>
-
+                    <Link href="/caminhoes">
+                        <a className="link">Tabela Fipe Caminhões </a>
+                    </Link>
                 </div>
             </div>
         </React.Fragment>
