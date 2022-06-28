@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Api from '/src/controllers/frontend';
 import Marcas from '/src/components/marcas';
 import Header from '/src/components/header';
+import Head from '/src/components/head';
 import Consulte from '/src/components/consultetambem';
 import Helper from '/src/controllers/helper';
 
@@ -37,6 +38,7 @@ export default function TipoVeiculo({ tipoVeiculo, labelTipoVeiculo, baseMesRefe
     const [modeloVeiculo, setModeloVeiculo] = useState(0);
     const [anoVeiculo, setAnoVeiculo] = useState(0);
     const [urlFIPE, setUrlFIPE] = useState("/");
+
 
     const [listaMarcaVeiculo, setListaMarcaVeiculo] = useState(marcas);
     const [listaModeloVeiculo, setListaModeloVeiculo] = useState();
@@ -123,6 +125,7 @@ export default function TipoVeiculo({ tipoVeiculo, labelTipoVeiculo, baseMesRefe
 
 
     return <React.Fragment>
+        <Head title={"Tabele FIPE de " + labelTipoVeiculo + ": Preços de " + labelTipoVeiculo + " novos e usados"} description={"Na Tabela FIPE de " + labelTipoVeiculo + " você pode consultar de maneira rápida e prática preços de " + labelTipoVeiculo + " novos e usados. Confira já!"} />
         <Header />
 
         <div id="section-wrapper" className="sectionWrapper">
@@ -147,8 +150,8 @@ export default function TipoVeiculo({ tipoVeiculo, labelTipoVeiculo, baseMesRefe
                         </ol>
                     </nav>
 
-                    <h1 className="h1">Tabela Fipe de Carros</h1>
-                    <h2 className="h2">Consulte o valor de um carro de forma gratuita</h2>
+                    <h1 className="h1">Tabela Fipe de {Helper.CapitalizeFirstLetter(labelTipoVeiculo)}</h1>
+                    <h2 className="h2">Consulte o valor de um {labelTipoVeiculo} de forma gratuita</h2>
 
 
 
