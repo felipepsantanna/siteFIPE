@@ -10,6 +10,11 @@ import Helper from '/src/controllers/helper';
 export async function getServerSideProps(context) {
 
     const tipoVeiculo = Helper.IDTipoVeiculo(context.params.tipoveiculo);
+    if (typeof tipoVeiculo === 'undefined') {
+        return { // <-----------------does the trick here!!
+            notFound: true
+        }
+    }
     const labelTipoVeiculo = context.params.tipoveiculo;
 
     const api = new Api();
