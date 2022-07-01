@@ -138,7 +138,7 @@ export default function Home() {
 
 
   return <React.Fragment>
-    <Head title="Tabela FIPE: Preços de carros novos e usados" description="abela FIPE atualizada até Junho de 2022. Consulte carros, motos e caminhões por marca, modelo e ano. Veja os valores dos anos anteriores." />
+    <Head title="Tabela FIPE: Preços de carros novos e usados" description="Tabela FIPE atualizada até Junho de 2022. Consulte carros, motos e caminhões por marca, modelo e ano. Veja os valores dos anos anteriores." />
     <Header />
 
     <div id="section-wrapper" className="sectionWrapper">
@@ -234,6 +234,46 @@ export default function Home() {
       </section>
     </div>
 
+    <div id="section-wrapper" className="sectionWrapper">
+      <section className="section-search">
+
+
+        <article className="article-search">
+          <h2>Tabela Fipe: o que é?</h2>
+          <p>É comum a desinformação na internet sobre vários assuntos e, sabendo disso, nós trouxemos neste artigo, informações importantes acerca da <strong>Tabela Fipe</strong>, como ela costuma funcionar e qual a sua função em negociações.
+
+            Destacamos que a <strong>Tabela Fipe</strong> foi criada pela Fundação Instituto de Pesquisas Econômicas - FIPE, por isso sua denominação. Além disso, esse instituto é o principal responsável pela referência no mercado de carros seminovos ou usados, servindo normalmente como base para consulta de valores em negociações como seguros ou contratos.
+          </p>
+          <h3>A origem da Tabela Fipe</h3>
+          Criada em 1973 de modo a servir como base de valores para negociações de carros, tal tabela foi originada visando ajudar a Faculdade de Economia, Administração e Contabilidade da Universidade de São Paulo.
+
+          <h3>Mas como funciona a Tabela Fipe?</h3>
+
+          O funcionamento da <strong>Tabela Fipe</strong> é bastante simples, mas é rigorosa. Ela separa apenas a média dos valores dos veículos. Ou seja: são considerados os valores médios, excluindo os que estão em extremos: preços altos ou baixos demais para o mercado.
+
+          Destaca-se que a <strong>Tabela Fipe</strong> é apenas uma espécie de “adereço”, ou seja, um parâmetro para o planejamento estratégico de venda de algum veículo.
+
+          Assim, a tabela costuma expressar apenas uma média nacional dos valores; organizando e observando aspectos como o estado do veículo, sua conservação, o ano e modelo. São averiguados veículos como automóveis, motos, motonetas, e caminhões, sejam eles  usados, seminovos ou novos no mercado brasileiro.
+
+          Como um parâmetro, a Tabela Fipe é bastante usada por pessoas comuns que buscam vender seu veículo com um valor justo e coerente com a demanda e a oferta do mercado nacional.
+
+          O ano do carro, moto, caminhão ou motoneta é usado como um dos critérios para determinar o valor do veículo, além dele, usam-se também o modelo, condições do veículo, se é quatro ou duas portas, motor, etc.
+
+          Os valores são sempre divulgados na tabela em reais do mês e ano de referência. É comum que a tabela sofra alterações com frequência e influência da situação econômica do país.
+
+          <h3>O valor dos automóveis aumentou?</h3>
+          Segundo informações mais recentes, no presente ano (2022), houve um aumento de 21% no valor dos automóveis. Isso ocorreu devido a uma procura mais intensa e uma oferta de veículos no mercado inferior à da procura.
+
+          Contudo, apesar de o valor dos automóveis ter ficado elevado, uma má notícia também surgiu: o aumento no valor do IPVA também ocorreu. Desse modo, tanto quem comercializa carros seminovos ou usados, tanto quem apenas utiliza, sentiram impactos sérios nas finanças quando o assunto é automóvel.
+
+          Portanto, vale a pena observar frequentemente os valores determinados na tabela, a fim de evitar perdas financeiras ou precificar o veículo de maneira equivocada, evitando frustrações e arrependimentos no pós-venda.
+
+          Também para quem compra, é imprescindível comparar valores e modelos dos carros, motos, caminhões ou veículos afins. A tabela auxilia em grande parte das negociações, servindo como um respaldo para argumentação no momento da compra do veículo.
+
+
+        </article>
+      </section>
+    </div>
 
   </React.Fragment>
 }
