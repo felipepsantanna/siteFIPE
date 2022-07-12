@@ -304,7 +304,6 @@ select {
     color: -internal-light-dark(black, white);
     letter-spacing: normal;
     word-spacing: normal;
-    line-height: normal;
     text-transform: none;
     text-indent: 0px;
     text-shadow: none;
@@ -782,7 +781,11 @@ button:disabled {
     .item-modelo .item-modelo-marca p{
         font-size: 16px;
         font-weight: 700;
-        line-height: 26px;
+    }
+
+    .item-modelo .item-modelo-marca i{
+        font-size: 12px;
+        margin-top: -10px;
     }
 
     .item-modelo .item-modelo-img > div{
@@ -858,7 +861,6 @@ button:disabled {
 
     .item-modelo .item-modelo-marca p{
         font-size: 14px;
-        line-height: 16px;
     }
 
 

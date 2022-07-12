@@ -11,12 +11,14 @@ export default function Modelos({ listaModelos }) {
 
                 {
                     listaModelos && listaModelos.map(m => {
+                        
                         return <li key={m.codigoModelo}>
-                            <Link href="/tabela-fipe/carros/volkswagen/gol">
+                            <Link href={m.URL}>
                                 <a>
                                     <div className="item-modelo">
                                         <div className="item-modelo-marca">
                                             <p> {m.labelModelo}</p>
+                                            <i>{m.labelAno}</i>
                                         </div>
                                         <div className="item-modelo-img">
                                             <div>
