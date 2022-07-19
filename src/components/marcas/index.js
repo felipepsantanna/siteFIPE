@@ -25,13 +25,14 @@ export default function Marcas({ labelTipoVeiculo, listaMarcaVeiculo }) {
                         <div>
 
 
-                            {
+                            { 
                                 listaMarcaVeiculo && listaMarcaVeiculo.map(m => {
                                     return <div key={m.Value} className="marca">
                                         <Link href={"/" + labelTipoVeiculo + "/" + Helper.NormalizeURL(m.Label)}>
                                             <a>
                                                 <div className="all">
                                                     <div>
+
                                                         <Image
                                                             src={ImageHelper.LogoDasMarcas(m.Value, labelTipoVeiculo)}
                                                             alt={m.Label}

@@ -1,0 +1,442 @@
+[
+    {
+        "Label": "Acura",
+        "Value": "1",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Agrale",
+        "Value": "2",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Alfa Romeo",
+        "Value": "3",
+        "tipo": "carros"
+    },
+    {
+        "Label": "AM Gen",
+        "Value": "4",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Asia Motors",
+        "Value": "5",
+        "tipo": "carros"
+    },
+    {
+        "Label": "ASTON MARTIN",
+        "Value": "189",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Audi",
+        "Value": "6",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Baby",
+        "Value": "207",
+        "tipo": "carros"
+    },
+    {
+        "Label": "BMW",
+        "Value": "7",
+        "tipo": "carros"
+    },
+    {
+        "Label": "BRM",
+        "Value": "8",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Bugre",
+        "Value": "123",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Cadillac",
+        "Value": "10",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Caoa Chery",
+        "Value": "161",
+        "tipo": "carros"
+    },
+    {
+        "Label": "CBT Jipe",
+        "Value": "11",
+        "tipo": "carros"
+    },
+    {
+        "Label": "CHANA",
+        "Value": "136",
+        "tipo": "carros"
+    },
+    {
+        "Label": "CHANGAN",
+        "Value": "182",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Chrysler",
+        "Value": "12",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Citroen",
+        "Value": "13",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Cross Lander",
+        "Value": "14",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Daewoo",
+        "Value": "15",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Daihatsu",
+        "Value": "16",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Dodge",
+        "Value": "17",
+        "tipo": "carros"
+    },
+    {
+        "Label": "EFFA",
+        "Value": "147",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Engesa",
+        "Value": "18",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Envemo",
+        "Value": "19",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Ferrari",
+        "Value": "20",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Fiat",
+        "Value": "21",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Fibravan",
+        "Value": "149",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Ford",
+        "Value": "22",
+        "tipo": "carros"
+    },
+    {
+        "Label": "FOTON",
+        "Value": "190",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Fyber",
+        "Value": "170",
+        "tipo": "carros"
+    },
+    {
+        "Label": "GEELY",
+        "Value": "199",
+        "tipo": "carros"
+    },
+    {
+        "Label": "GM - Chevrolet",
+        "Value": "23",
+        "tipo": "carros"
+    },
+    {
+        "Label": "GREAT WALL",
+        "Value": "153",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Gurgel",
+        "Value": "24",
+        "tipo": "carros"
+    },
+    {
+        "Label": "HAFEI",
+        "Value": "152",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Honda",
+        "Value": "25",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Hyundai",
+        "Value": "26",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Isuzu",
+        "Value": "27",
+        "tipo": "carros"
+    },
+    {
+        "Label": "IVECO",
+        "Value": "208",
+        "tipo": "carros"
+    },
+    {
+        "Label": "JAC",
+        "Value": "177",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Jaguar",
+        "Value": "28",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Jeep",
+        "Value": "29",
+        "tipo": "carros"
+    },
+    {
+        "Label": "JINBEI",
+        "Value": "154",
+        "tipo": "carros"
+    },
+    {
+        "Label": "JPX",
+        "Value": "30",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Kia Motors",
+        "Value": "31",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Lada",
+        "Value": "32",
+        "tipo": "carros"
+    },
+    {
+        "Label": "LAMBORGHINI",
+        "Value": "171",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Land Rover",
+        "Value": "33",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Lexus",
+        "Value": "34",
+        "tipo": "carros"
+    },
+    {
+        "Label": "LIFAN",
+        "Value": "168",
+        "tipo": "carros"
+    },
+    {
+        "Label": "LOBINI",
+        "Value": "127",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Lotus",
+        "Value": "35",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Mahindra",
+        "Value": "140",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Maserati",
+        "Value": "36",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Matra",
+        "Value": "37",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Mazda",
+        "Value": "38",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Mercedes-Benz",
+        "Value": "39",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Mercury",
+        "Value": "40",
+        "tipo": "carros"
+    },
+    {
+        "Label": "MG",
+        "Value": "167",
+        "tipo": "carros"
+    },
+    {
+        "Label": "MINI",
+        "Value": "156",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Mitsubishi",
+        "Value": "41",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Miura",
+        "Value": "42",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Nissan",
+        "Value": "43",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Peugeot",
+        "Value": "44",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Plymouth",
+        "Value": "45",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Pontiac",
+        "Value": "46",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Porsche",
+        "Value": "47",
+        "tipo": "carros"
+    },
+    {
+        "Label": "RAM",
+        "Value": "185",
+        "tipo": "carros"
+    },
+    {
+        "Label": "RELY",
+        "Value": "186",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Renault",
+        "Value": "48",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Rolls-Royce",
+        "Value": "195",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Rover",
+        "Value": "49",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Saab",
+        "Value": "50",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Saturn",
+        "Value": "51",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Seat",
+        "Value": "52",
+        "tipo": "carros"
+    },
+    {
+        "Label": "SHINERAY",
+        "Value": "183",
+        "tipo": "carros"
+    },
+    {
+        "Label": "smart",
+        "Value": "157",
+        "tipo": "carros"
+    },
+    {
+        "Label": "SSANGYONG",
+        "Value": "125",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Subaru",
+        "Value": "54",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Suzuki",
+        "Value": "55",
+        "tipo": "carros"
+    },
+    {
+        "Label": "TAC",
+        "Value": "165",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Toyota",
+        "Value": "56",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Troller",
+        "Value": "57",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Volvo",
+        "Value": "58",
+        "tipo": "carros"
+    },
+    {
+        "Label": "VW - VolksWagen",
+        "Value": "59",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Wake",
+        "Value": "163",
+        "tipo": "carros"
+    },
+    {
+        "Label": "Walk",
+        "Value": "120",
+        "tipo": "carros"
+    }
+]

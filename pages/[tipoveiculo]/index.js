@@ -36,7 +36,6 @@ export async function getServerSideProps(context) {
 }
 
 export default function TipoVeiculo({ tipoVeiculo, labelTipoVeiculo, baseMesReferencia, marcas }) {
-
     const [mesReferencia, setMesReferencia] = useState(baseMesReferencia);
     const [codigoTipoVeiculo, setCodigoTipoVeiculo] = useState(tipoVeiculo);
     const [marcaVeiculo, setMarcaVeiculo] = useState(0);

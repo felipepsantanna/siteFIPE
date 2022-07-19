@@ -3,12 +3,14 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Api from '/src/controllers/frontend';
 import Modelos from '/src/components/modelos';
+import Head from '/src/components/head';
 import Header from '/src/components/header';
-import Helper from '/src/controllers/helper';
 
-export default function AnoCombustivel({ IDtipoVeiculo, labelTipoVeiculo, labelMarca, listaModelos }) {
+export default function AnoCombustivel({ marca }) {
     return <React.Fragment>
-        <Header />
+
+<Head title={"Tabela Fipe " + marca.Label}  description={"Consulte o preço de carros novos e usados da " + marca.Label} />
+        <Header title />
 
         <div id="section-wrapper" className="sectionWrapper">
             <section className="section-search">
@@ -26,33 +28,32 @@ export default function AnoCombustivel({ IDtipoVeiculo, labelTipoVeiculo, labelM
                             </li>
                             <li aria-hidden="true" className="MuiBreadcrumbs-separator">/</li>
                             <li className="MuiBreadcrumbs-li">
-                                <Link href={"/" + labelTipoVeiculo}>
+                                <Link href={"/" + marca.tipo}>
                                     <a>
-                                        <div className="breadcrumb-links">{labelTipoVeiculo}</div>
+                                        <div className="breadcrumb-links">{marca.tipo}</div>
                                     </a>
                                 </Link>
                             </li>
                             <li aria-hidden="true" className="MuiBreadcrumbs-separator">/</li>
                             <li className="MuiBreadcrumbs-li">
-                                <div className="breadcrumb-links">{labelMarca}</div>
+                                <div className="breadcrumb-links">{marca.Label}</div>
                             </li>
                         </ol>
                     </nav>
 
                     <div className="logo-marca">
-                        <Image
-
-                            src="/marcas/1.png"
-                            alt={labelMarca}
+                        <img
+                            src={"/marcas/" + marca.Value + ".png"}
+                            alt={marca.Label}
                             width={110}
                             height={110}
                         />
                     </div>
 
-                    <h1 className="h1">Tabela Fipe {labelMarca} </h1>
-                    <h2 className="h2">Consulte o preço de carros novos e usados da {labelMarca}</h2>
+                    <h1 className="h1">Tabela Fipe {marca.Label} </h1>
+                    <h2 className="h2">Consulte o preço de carros novos e usados da {marca.Label}</h2>
 
-                    <Modelos listaModelos={listaModelos} labelTipoVeiculo={labelTipoVeiculo} />
+                    <Modelos marca={marca} />
 
                 </article>
             </section>
@@ -62,11 +63,22 @@ export default function AnoCombustivel({ IDtipoVeiculo, labelTipoVeiculo, labelM
 
 
 export async function getServerSideProps(context) {
+    
+    const api = new Api();
+    const marca = await api.getMarcasID(context.params.tipoveiculo, context.params.marca.replace('-', ' '));
 
-    const IDtipoVeiculo = Helper.IDTipoVeiculo(context.params.tipoveiculo);
+    return {
+        props: {
+            marca
+        }
+    }
+
+    //await api.getModelos(api.mesReferencia.Codigo, IDtipoVeiculo, 23);
+
+   /* 
     const labelTipoVeiculo = context.params.tipoveiculo;
     const labelMarca = context.params.marca;
-
+    const IDtipoVeiculo = Helper.IDTipoVeiculo(context.params.tipoveiculo);
     const api = new Api();
     await api.getModelos(api.mesReferencia.Codigo, IDtipoVeiculo, 23);
     let listaModelos = [];
@@ -88,6 +100,6 @@ export async function getServerSideProps(context) {
             labelMarca,
             listaModelos
         }
-    }
+    }*/
 }
 

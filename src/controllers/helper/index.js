@@ -28,7 +28,7 @@ const Helper = {
             default:
                 break;
         }
-        console.log(tipoVeiculo)
+
         return ("/" + tipoVeiculo + "/" + this.NormalizeURL(labelMarca) + "/" + this.NormalizeURL(labelModelo) + "/" + this.NormalizeURL(labelAno)).toLowerCase();
     },
 
