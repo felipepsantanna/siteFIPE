@@ -57,8 +57,10 @@ export default function AnoCombustivel({ fipe }) {
                     <h2 className="h2">Este é o preço de compra do veículo</h2>
 
                     <p className="valor">{fipe.valor}</p>
+                    {/*}
                     <p className="mes-referencia">Mês de referência: {fipe.mesReferencia}</p>
-
+                    {*/}
+                    <p className="mes-referencia">Mês de referência: Julho 2022</p>
                 </article>
             </section>
         </div>

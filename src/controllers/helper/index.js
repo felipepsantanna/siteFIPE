@@ -5,6 +5,11 @@ const Helper = {
         return labels[idTipoVeiculo];
     },
 
+    LabelTipoVeiculoURL(idTipoVeiculo) {
+        const labels = ["", "carros", "motos", "caminhoes"]
+        return labels[idTipoVeiculo];
+    },
+
     IDTipoVeiculo(labelTipoVeiculo) {
         const tipoVeiculo = {
             carros: 1,
