@@ -152,8 +152,8 @@ export default function Home() {
 
           </div>
 
-          <h1 className="h1">Tabela Fipe de Carros</h1>
-          <h2 className="h2">Consulte o valor de um carro de forma gratuita</h2>
+          <h1 className="h1">Tabela Fipe</h1>
+          <h2 className="h2">Consulte o valor de um automóvel de forma gratuita</h2>
 
 
 

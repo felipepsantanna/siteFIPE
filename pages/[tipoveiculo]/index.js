@@ -16,6 +16,7 @@ export async function getServerSideProps(context) {
         }
     }
     const labelTipoVeiculo = context.params.tipoveiculo;
+    const LabelSingulgarTipoVeiculo = Helper.LabelSingularTipoVeiculo(tipoVeiculo);
 
     const api = new Api();
     await api.getMesReferencia();
@@ -29,13 +30,14 @@ export async function getServerSideProps(context) {
         props: {
             tipoVeiculo,
             labelTipoVeiculo,
+            LabelSingulgarTipoVeiculo,
             baseMesReferencia,
             marcas
         }
     }
 }
 
-export default function TipoVeiculo({ tipoVeiculo, labelTipoVeiculo, baseMesReferencia, marcas }) {
+export default function TipoVeiculo({ tipoVeiculo, labelTipoVeiculo, LabelSingulgarTipoVeiculo, baseMesReferencia, marcas }) {
     const [mesReferencia, setMesReferencia] = useState(baseMesReferencia);
     const [codigoTipoVeiculo, setCodigoTipoVeiculo] = useState(tipoVeiculo);
     const [marcaVeiculo, setMarcaVeiculo] = useState(0);
@@ -155,7 +157,7 @@ export default function TipoVeiculo({ tipoVeiculo, labelTipoVeiculo, baseMesRefe
                     </nav>
 
                     <h1 className="h1">Tabela Fipe de {Helper.CapitalizeFirstLetter(labelTipoVeiculo)}</h1>
-                    <h2 className="h2">Consulte o valor de um {labelTipoVeiculo} de forma gratuita</h2>
+                    <h2 className="h2">Consulte o valor de {Helper.UmUmaLabelTipoVeiculo(tipoVeiculo)} {LabelSingulgarTipoVeiculo} de forma gratuita</h2>
 
 
 
