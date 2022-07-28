@@ -208,7 +208,7 @@ export default function TipoVeiculo({ tipoVeiculo, labelTipoVeiculo, LabelSingul
                 </article>
             </section>
 
-            <Marcas labelTipoVeiculo={labelTipoVeiculo} listaMarcaVeiculo={listaMarcaVeiculo} />
+            <Marcas labelTipoVeiculo={labelTipoVeiculo} listaMarcaVeiculo={listaMarcaVeiculo} UmUmaLabelTipoVeiculo={Helper.UmUmaLabelTipoVeiculo(tipoVeiculo)} LabelSingulgarTipoVeiculo={LabelSingulgarTipoVeiculo}/>
         </div>
 
 

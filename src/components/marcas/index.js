@@ -5,13 +5,13 @@ import Helper from '/src/controllers/helper';
 import ImageHelper from '/src/controllers/helper/img';
 
 
-export default function Marcas({ labelTipoVeiculo, listaMarcaVeiculo }) {
+export default function Marcas({ labelTipoVeiculo, listaMarcaVeiculo, UmUmaLabelTipoVeiculo, LabelSingulgarTipoVeiculo }) {
 
     return (
         <React.Fragment>
             <section className="section-marcas">
                 <article>
-                    <h2>Escolha uma marca de carro</h2>
+                    <h2>Escolha a marca de {UmUmaLabelTipoVeiculo} {LabelSingulgarTipoVeiculo}</h2>
 
                     <div className="busca">
                         <div className="busca2">
