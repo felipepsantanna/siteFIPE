@@ -1,22 +1,22 @@
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-section{
-  display: block;
+section {
+    display: block;
 }
 
 p {
@@ -27,7 +27,7 @@ p {
     margin-inline-end: 0px;
 }
 
-ul{
+ul {
     display: block;
     list-style-type: disc;
     margin-block-start: 1em;
@@ -37,13 +37,13 @@ ul{
     padding-inline-start: 40px;
 }
 
-.lista-marcas .marca .all span{
-    position: initial!important;
-}                                                  
+.lista-marcas .marca .all span {
+    position: initial !important;
+}
 
 
-.headerWrapper{
-  transition: all 0.3s ease 0s;
+.headerWrapper {
+    transition: all 0.3s ease 0s;
 
     top: 0px;
     width: 100%;
@@ -96,9 +96,9 @@ svg:not(:root) {
     background-color: rgb(248, 247, 252);
 }
 
-.article-search{
-      margin: 0px auto;
-    padding: 40px 64px !important;
+.article-search {
+    margin: 0px auto;
+    padding: 16px;
     max-width: 1216px;
 }
 
@@ -118,13 +118,13 @@ svg:not(:root) {
     text-align: center;
 }
 
-.h2{
-      color: rgb(66, 66, 66);
+.h2 {
+    color: rgb(66, 66, 66);
     text-align: center;
 }
 
-.article-search .box{
-    display: flex;
+.article-search .box {
+    /*display: flex;
     box-shadow: rgb(0 0 0 / 16%) 0px 1px 2px, rgb(0 0 0 / 10%) 0px 1px 2px;
     box-sizing: border-box;
     align-items: center;
@@ -133,13 +133,28 @@ svg:not(:root) {
     background-color: rgb(255, 255, 255);
     width: 771px;
     margin: 16px auto 0px;
-    padding: 32px 50px;
+    padding: 32px 50px;*/
+    display: flex;
+    z-index: 199;
+    position: relative;
+    box-shadow: rgb(0 0 0 / 16%) 0px 1px 2px, rgb(0 0 0 / 10%) 0px 1px 2px;
+    box-sizing: border-box;
+    align-items: center;
+    border-radius: 4px;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+
+    padding: 16px;
+    margin-top: 140px;
+    margin-bottom: 0px;
 }
+
 /*CSS: BREADCRUMB*/
 .MuiTypography-root {
     margin: 0;
     display: block;
 }
+
 .MuiTypography-body1 {
     font-size: 16px;
     font-family: Poppins, Helvetica, Arial, sans-serif;
@@ -150,6 +165,7 @@ svg:not(:root) {
 .MuiTypography-colorTextSecondary {
     color: rgba(0, 0, 0, 0.54);
 }
+
 .MuiBreadcrumbs-ol {
     margin: 0;
     display: flex;
@@ -172,7 +188,7 @@ ol {
     display: list-item;
     text-align: -webkit-match-parent;
     text-decoration: none;
-    
+
 }
 
 .breadcrumb-inicio {
@@ -205,8 +221,8 @@ ol {
 
 /*CSS: BREADCRUMB*/
 
-.article-search .box .h2{
-  color: rgb(68, 67, 188);
+.article-search .box .h2 {
+    color: rgb(68, 67, 188);
     display: block;
     font-size: 16px;
     font-family: Poppins, Helvetica, Arial, sans-serif;
@@ -214,8 +230,8 @@ ol {
     line-height: 26px;
 }
 
-.article-search .box .tipoVeiculo{
-  display: flex;
+.article-search .box .tipoVeiculo {
+    display: flex;
     justify-content: space-between;
     width: 290px;
     margin: 16px auto 24px;
@@ -236,19 +252,18 @@ ol {
     display: grid;
     gap: 16px 20px;
     grid-template-rows: 48px;
-    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .article-search .box .consultarPrecos {
-   width: 170px;
+    width: 100%;
     margin-top: 24px;
 }
 
 /*INICIO: dropboxes*/
 
-.form-control{
-  display: block;
-    width: 100%;  
+.form-control {
+    display: block;
+    width: 100%;
     line-height: normal;
     border-radius: 6px;
     font-size: 15px;
@@ -294,8 +309,8 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 select {
-      animation: .2s linear both fadeIn;
-  text-transform: none;
+    animation: .2s linear both fadeIn;
+    text-transform: none;
     margin: 0;
     font-size: inherit;
     line-height: inherit;
@@ -323,6 +338,7 @@ select {
     border-image: initial;
     border-radius: 0px;
 }
+
 /*FIM: dropboxes*/
 
 
@@ -354,13 +370,13 @@ select {
 }
 
 .MuiChip-colorSecondary {
-    color: #e9eaf9!important;
-    background-color: #4443BC!important;
+    color: #e9eaf9 !important;
+    background-color: #4443BC !important;
 }
 
 .MuiChip-outlinedSecondary {
-    color: #4443BC!important;
-    border: 1px solid #4443BC!important;  
+    color: #4443BC !important;
+    border: 1px solid #4443BC !important;
 }
 
 .MuiChip-outlined {
@@ -378,7 +394,7 @@ select {
     padding: 0;
     font-size: 0.8125rem;
     box-sizing: border-box;
-    transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     align-items: center;
     font-family: Poppins, Helvetica, Arial, sans-serif;
     white-space: nowrap;
@@ -409,6 +425,7 @@ select {
     -webkit-appearance: none;
     -webkit-tap-highlight-color: transparent;
 }
+
 /*EFEITOS COM OS BOTÕES DO TIPO VEÍCULO*/
 
 
@@ -445,7 +462,7 @@ select {
     font-size: 14px;
     min-width: 64px;
     box-sizing: border-box;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     font-family: Poppins, Helvetica, Arial, sans-serif;
     font-weight: 500;
     line-height: 24px;
@@ -530,52 +547,52 @@ button:disabled {
 
 
 
-.consulte-tambem{
-  display: flex;
-  width: 771px;
+.consulte-tambem {
+    display: flex;
+    width: 771px;
     margin: 8px auto 0px;
     align-items: center;
     flex-direction: row;
     font-size: 12px;
 }
 
-.consulte-tambem .por{
-  line-height: 22px;
+.consulte-tambem .por {
+    line-height: 22px;
     margin-right: 4px;
 }
 
-.consulte-tambem .links{
+.consulte-tambem .links {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     font-weight: 500;
 }
 
-.consulte-tambem .links .espacos{
+.consulte-tambem .links .espacos {
     margin-right: 2px;
 }
 
-.consulte-tambem .links .link{
-  color: #009A8A
+.consulte-tambem .links .link {
+    color: #009A8A
 }
 
 
 /*section marcas*/
-.section-marcas{
+.section-marcas {
     position: static;
     background-color: rgb(255, 255, 255);
 }
 
-.section-marcas article{
+.section-marcas article {
     margin: 0px auto;
     padding: 16px;
     max-width: 1216px;
 }
 
-.section-marcas h2{
+.section-marcas h2 {
     color: rgb(66, 66, 66);
     text-align: center;
-     font-size: 16px;
+    font-size: 16px;
     margin-top: 16px;
     font-weight: 400;
     line-height: 26px;
@@ -592,26 +609,26 @@ button:disabled {
 }
 
 
-.section-marcas .busca input{
+.section-marcas .busca input {
     color: #424242;
     border: 1px solid #E0E0E0;
     overflow: hidden;
     border-radius: 4px;
     background-color: #FFFFFF;
-    width: 90%!important;
+    width: 90% !important;
 }
 
-.lista-marcas{
+.lista-marcas {
     position: relative;
     width: 100%;
     height: 100%;
 
 }
 
-.lista-marcas > div {
+.lista-marcas>div {
     width: 100% !important;
     height: 100% !important;
-    overflow: visible; 
+    overflow: visible;
     width: 0px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -643,7 +660,7 @@ button:disabled {
     justify-content: center;
 }
 
-.lista-marcas .marca .all > div{
+.lista-marcas .marca .all>div {
     overflow: hidden;
     box-sizing: border-box;
     display: inline-block;
@@ -652,8 +669,8 @@ button:disabled {
     height: 74px;
 }
 
-.lista-marcas .marca img{
-        position: absolute;
+.lista-marcas .marca img {
+    position: absolute;
     inset: 0px;
     box-sizing: border-box;
     padding: 0px;
@@ -679,22 +696,22 @@ button:disabled {
     background-color: rgb(0, 154, 138);
 }
 
-.mes-referencia{
+.mes-referencia {
     color: rgb(117, 117, 117);
     text-align: center;
     padding-bottom: 15px;
     border-bottom: 1px solid rgb(0, 154, 138);
 }
 
-.lista-modelos{
-        display: flex;
+.lista-modelos {
+    display: flex;
     padding: 0px;
     flex-wrap: wrap;
     margin-bottom: 0px;
     justify-content: initial;
 }
 
-.lista-modelos li{
+.lista-modelos li {
     display: flex;
     box-sizing: border-box;
     list-style: none;
@@ -703,12 +720,12 @@ button:disabled {
     width: 100%;
 }
 
-.lista-modelos li a{
-     width: 100%;
+.lista-modelos li a {
+    width: 100%;
     text-decoration: none;
 }
 
-.item-modelo{
+.item-modelo {
     width: 100%;
     border: 1px solid rgb(224, 224, 224);
     height: 100%;
@@ -719,7 +736,7 @@ button:disabled {
     justify-content: space-between;
 }
 
-.item-modelo .item-modelo-marca{
+.item-modelo .item-modelo-marca {
     flex: 1 1 0%;
     display: flex;
     border-right: 1px solid rgb(224, 224, 224);
@@ -728,17 +745,17 @@ button:disabled {
     justify-content: center;
 }
 
-.item-modelo .item-modelo-marca p{
+.item-modelo .item-modelo-marca p {
     color: rgb(66, 66, 66);
 }
 
-.item-modelo .item-modelo-img{
+.item-modelo .item-modelo-img {
     height: 100%;
     display: flex;
     align-items: center;
 }
 
-.item-modelo .item-modelo-img > div{
+.item-modelo .item-modelo-img>div {
     overflow: hidden;
     box-sizing: border-box;
     display: inline-block;
@@ -747,8 +764,8 @@ button:disabled {
     height: 40px;
 }
 
-.item-modelo .item-modelo-img img{
-        position: absolute;
+.item-modelo .item-modelo-img img {
+    position: absolute;
     inset: 0px;
     box-sizing: border-box;
     padding: 0px;
@@ -764,44 +781,44 @@ button:disabled {
     object-fit: cover;
 }
 
-.logo-marca{
+.logo-marca {
     margin: 0px auto;
     display: flex;
     justify-content: center;
 }
 
 
-@media (min-width: 1170px){
-    .lista-modelos li{
+@media (min-width: 1170px) {
+    .lista-modelos li {
         width: calc(33.3333%);
         height: 122px;
         padding: 16px;
     }
 
-    .item-modelo .item-modelo-marca p{
+    .item-modelo .item-modelo-marca p {
         font-size: 16px;
         font-weight: 700;
     }
 
-    .item-modelo .item-modelo-marca i{
+    .item-modelo .item-modelo-marca i {
         font-size: 12px;
         margin-top: -10px;
     }
 
-    .item-modelo .item-modelo-img > div{
-    
+    .item-modelo .item-modelo-img>div {
+
         width: 116px;
         height: 56px;
     }
 }
-   
 
-@media (min-width: 960px) and (max-width: 1170px){
+
+@media (min-width: 960px) and (max-width: 1170px) {
     .section-marcas article {
         padding: 40px 64px !important;
-        }
+    }
 
-        .section-marcas h2{
+    .section-marcas h2 {
         color: rgb(66, 66, 66);
         font-size: 16px;
         font-size: 34px;
@@ -820,6 +837,7 @@ button:disabled {
         width: 1008px;
         margin: 40px auto 32px;
     }
+
     .section-marcas .mae-label {
         height: 48px;
     }
@@ -829,8 +847,8 @@ button:disabled {
         transform: translate(12px, 18px);
     }
 
-    .section-marcas .busca input{
-    font-size: 16px;
+    .section-marcas .busca input {
+        font-size: 16px;
     }
 
     .valor {
@@ -849,17 +867,17 @@ button:disabled {
         line-height: 26px;
     }
 
-    .lista-modelos{
+    .lista-modelos {
         margin: 0px auto;
     }
 
-    .lista-modelos li{
+    .lista-modelos li {
         width: calc(33.3333%);
         height: 122px;
         padding: 16px;
     }
 
-    .item-modelo .item-modelo-marca p{
+    .item-modelo .item-modelo-marca p {
         font-size: 14px;
     }
 
@@ -871,7 +889,24 @@ button:disabled {
 }
 
 @media (min-width: 640px) and (max-width: 960px) {
-    .lista-modelos li{
+    .lista-modelos li {
         width: calc(50%);
     }
+}
+
+@media (max-width: 960px) {
+
+    .article-search .box .tipoVeiculo {
+        width: 100%;
+        margin: 0px auto 24px;
+        max-width: 260px;
+    }
+
+    .article-search .box .tipoVeiculo .MuiChip-clickable {
+        height: 23px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 17px;
+    }
+
 }
