@@ -630,8 +630,8 @@ button:disabled {
     height: 100% !important;
     overflow: visible;
     width: 0px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .lista-marcas .marca {
@@ -641,6 +641,7 @@ button:disabled {
     display: flex;
     box-sizing: border-box;
     justify-content: center;
+    min-width: 115px;
 }
 
 .lista-marcas .marca a {

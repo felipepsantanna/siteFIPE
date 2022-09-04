@@ -13,6 +13,7 @@ export default function Marcas({ labelTipoVeiculo, listaMarcaVeiculo, UmUmaLabel
                 <article>
                     <h2>Escolha a marca de {UmUmaLabelTipoVeiculo} {LabelSingulgarTipoVeiculo}</h2>
 
+                    { /*}
                     <div className="busca">
                         <div className="busca2">
                             <input aria-invalid="false" type="text" className="form-control" placeholder="Busca por marca" />
@@ -20,12 +21,12 @@ export default function Marcas({ labelTipoVeiculo, listaMarcaVeiculo, UmUmaLabel
 
                         </div>
                     </div>
-
+                    { */}
                     <div className="lista-marcas">
                         <div>
 
 
-                            { 
+                            {
                                 listaMarcaVeiculo && listaMarcaVeiculo.map(m => {
                                     return <div key={m.Value} className="marca">
                                         <Link href={"/" + labelTipoVeiculo + "/" + Helper.NormalizeURL(m.Label)}>
