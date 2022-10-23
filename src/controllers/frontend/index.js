@@ -6,9 +6,8 @@ export default class Index {
         "Codigo": 281,
         "Mes": "Janeiro/2022 "
     };
-    //url = 'https://api.rocktools.com.br/Fipe/';
+    url = 'https://api.rocktools.com.br/Fipe/';
     //url = " https://localhost:44328/Fipe/";
-    url = 'http://felipepsantanna-001-site2.dtempurl.com/Fipe/'
     marcas = null;
     modelos = null;
     Fipe = null;
