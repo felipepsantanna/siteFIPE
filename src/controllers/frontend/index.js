@@ -6,19 +6,20 @@ export default class Index {
         "Codigo": 281,
         "Mes": "Janeiro/2022 "
     };
-    url = 'https://api.rocktools.com.br/Fipe/';
+    //url = 'https://api.rocktools.com.br/Fipe/';
     //url = " https://localhost:44328/Fipe/";
+    url = 'http://felipepsantanna-001-site2.dtempurl.com/Fipe/'
     marcas = null;
     modelos = null;
     Fipe = null;
 
-async getMarcasID(labelTipoVeiculo, marca){
-    console.log(labelTipoVeiculo)
-    console.log(marca)
-    const found = marcas.find(element => element.tipo.toUpperCase() == labelTipoVeiculo.toUpperCase() && element.Label.toUpperCase() == marca.toUpperCase());
-    console.log(found)
-    return found;
-}
+    async getMarcasID(labelTipoVeiculo, marca) {
+        console.log(labelTipoVeiculo)
+        console.log(marca)
+        const found = marcas.find(element => element.tipo.toUpperCase() == labelTipoVeiculo.toUpperCase() && element.Label.toUpperCase() == marca.toUpperCase());
+        console.log(found)
+        return found;
+    }
     async getMesReferencia() {
         var urlAPI = new URL(`${this.url}MesReferencia`);
         const _mesReferencia = await fetch(urlAPI)
