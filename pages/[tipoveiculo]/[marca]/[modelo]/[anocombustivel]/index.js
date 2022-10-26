@@ -1,11 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
+import Head from '/src/components/head';
 import Header from '/src/components/header';
 import Api from '/src/controllers/frontend';
 import Helper from '/src/controllers/helper';
 
 export default function AnoCombustivel({ fipe }) {
     return <React.Fragment>
+        <Head title={"Tabela Fipe " + fipe.labelMarca + fipe.labelModelo + fipe.labelAno} description={"Na Tabela FIPE do " + fipe.labelMarca + fipe.labelModelo + fipe.labelAno + " você pode consultar de maneira rápida e prática preços de " + fipe.labelMarca + " novos e usados. Confira já!"} />
         <Header />
 
         <div id="section-wrapper" className="sectionWrapper">
