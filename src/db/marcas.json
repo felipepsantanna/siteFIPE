@@ -438,5 +438,565 @@
         "Label": "Walk",
         "Value": "120",
         "tipo": "carros"
+    },
+    {
+        "Label": "ADLY",
+        "Value": "60",
+        "tipo": "motos"
+    },
+    {
+        "Label": "AGRALE",
+        "Value": "61",
+        "tipo": "motos"
+    },
+    {
+        "Label": "AMAZONAS",
+        "Value": "131",
+        "tipo": "motos"
+    },
+    {
+        "Label": "APRILIA",
+        "Value": "62",
+        "tipo": "motos"
+    },
+    {
+        "Label": "ATALA",
+        "Value": "63",
+        "tipo": "motos"
+    },
+    {
+        "Label": "BAJAJ",
+        "Value": "64",
+        "tipo": "motos"
+    },
+    {
+        "Label": "BEE",
+        "Value": "205",
+        "tipo": "motos"
+    },
+    {
+        "Label": "Benelli",
+        "Value": "162",
+        "tipo": "motos"
+    },
+    {
+        "Label": "BETA",
+        "Value": "65",
+        "tipo": "motos"
+    },
+    {
+        "Label": "BIMOTA",
+        "Value": "66",
+        "tipo": "motos"
+    },
+    {
+        "Label": "BMW",
+        "Value": "67",
+        "tipo": "motos"
+    },
+    {
+        "Label": "BRANDY",
+        "Value": "68",
+        "tipo": "motos"
+    },
+    {
+        "Label": "BRAVA",
+        "Value": "130",
+        "tipo": "motos"
+    },
+    {
+        "Label": "BRP",
+        "Value": "150",
+        "tipo": "motos"
+    },
+    {
+        "Label": "BUELL",
+        "Value": "117",
+        "tipo": "motos"
+    },
+    {
+        "Label": "BUENO",
+        "Value": "155",
+        "tipo": "motos"
+    },
+    {
+        "Label": "byCristo",
+        "Value": "69",
+        "tipo": "motos"
+    },
+    {
+        "Label": "CAGIVA",
+        "Value": "70",
+        "tipo": "motos"
+    },
+    {
+        "Label": "CALOI",
+        "Value": "71",
+        "tipo": "motos"
+    },
+    {
+        "Label": "DAELIM",
+        "Value": "72",
+        "tipo": "motos"
+    },
+    {
+        "Label": "DAFRA",
+        "Value": "145",
+        "tipo": "motos"
+    },
+    {
+        "Label": "DAYANG",
+        "Value": "137",
+        "tipo": "motos"
+    },
+    {
+        "Label": "DAYUN",
+        "Value": "142",
+        "tipo": "motos"
+    },
+    {
+        "Label": "DERBI",
+        "Value": "73",
+        "tipo": "motos"
+    },
+    {
+        "Label": "DUCATI",
+        "Value": "74",
+        "tipo": "motos"
+    },
+    {
+        "Label": "EMME",
+        "Value": "75",
+        "tipo": "motos"
+    },
+    {
+        "Label": "FOX",
+        "Value": "132",
+        "tipo": "motos"
+    },
+    {
+        "Label": "FUSCO MOTOSEGURA",
+        "Value": "209",
+        "tipo": "motos"
+    },
+    {
+        "Label": "FYM",
+        "Value": "128",
+        "tipo": "motos"
+    },
+    {
+        "Label": "GARINNI",
+        "Value": "143",
+        "tipo": "motos"
+    },
+    {
+        "Label": "GAS GAS",
+        "Value": "76",
+        "tipo": "motos"
+    },
+    {
+        "Label": "GREEN",
+        "Value": "133",
+        "tipo": "motos"
+    },
+    {
+        "Label": "HAOBAO",
+        "Value": "138",
+        "tipo": "motos"
+    },
+    {
+        "Label": "HAOJUE",
+        "Value": "203",
+        "tipo": "motos"
+    },
+    {
+        "Label": "HARLEY-DAVIDSON",
+        "Value": "77",
+        "tipo": "motos"
+    },
+    {
+        "Label": "HARTFORD",
+        "Value": "78",
+        "tipo": "motos"
+    },
+    {
+        "Label": "HERO",
+        "Value": "79",
+        "tipo": "motos"
+    },
+    {
+        "Label": "HONDA",
+        "Value": "80",
+        "tipo": "motos"
+    },
+    {
+        "Label": "HUSABERG",
+        "Value": "81",
+        "tipo": "motos"
+    },
+    {
+        "Label": "HUSQVARNA",
+        "Value": "82",
+        "tipo": "motos"
+    },
+    {
+        "Label": "INDIAN",
+        "Value": "202",
+        "tipo": "motos"
+    },
+    {
+        "Label": "IROS",
+        "Value": "158",
+        "tipo": "motos"
+    },
+    {
+        "Label": "JIAPENG VOLCANO",
+        "Value": "141",
+        "tipo": "motos"
+    },
+    {
+        "Label": "JOHNNYPAG",
+        "Value": "174",
+        "tipo": "motos"
+    },
+    {
+        "Label": "JONNY",
+        "Value": "151",
+        "tipo": "motos"
+    },
+    {
+        "Label": "KAHENA",
+        "Value": "129",
+        "tipo": "motos"
+    },
+    {
+        "Label": "KASINSKI",
+        "Value": "118",
+        "tipo": "motos"
+    },
+    {
+        "Label": "KAWASAKI",
+        "Value": "85",
+        "tipo": "motos"
+    },
+    {
+        "Label": "KTM",
+        "Value": "87",
+        "tipo": "motos"
+    },
+    {
+        "Label": "KYMCO",
+        "Value": "204",
+        "tipo": "motos"
+    },
+    {
+        "Label": "LANDUM",
+        "Value": "159",
+        "tipo": "motos"
+    },
+    {
+        "Label": "L\u0027AQUILA",
+        "Value": "88",
+        "tipo": "motos"
+    },
+    {
+        "Label": "LAVRALE",
+        "Value": "89",
+        "tipo": "motos"
+    },
+    {
+        "Label": "LERIVO",
+        "Value": "139",
+        "tipo": "motos"
+    },
+    {
+        "Label": "LIFAN",
+        "Value": "178",
+        "tipo": "motos"
+    },
+    {
+        "Label": "Lon-V",
+        "Value": "148",
+        "tipo": "motos"
+    },
+    {
+        "Label": "MAGR�O TRICICLOS",
+        "Value": "175",
+        "tipo": "motos"
+    },
+    {
+        "Label": "Malaguti",
+        "Value": "146",
+        "tipo": "motos"
+    },
+    {
+        "Label": "MIZA",
+        "Value": "126",
+        "tipo": "motos"
+    },
+    {
+        "Label": "MOTO GUZZI",
+        "Value": "90",
+        "tipo": "motos"
+    },
+    {
+        "Label": "MOTOCAR",
+        "Value": "201",
+        "tipo": "motos"
+    },
+    {
+        "Label": "MOTORINO",
+        "Value": "200",
+        "tipo": "motos"
+    },
+    {
+        "Label": "MRX",
+        "Value": "160",
+        "tipo": "motos"
+    },
+    {
+        "Label": "MV AGUSTA",
+        "Value": "91",
+        "tipo": "motos"
+    },
+    {
+        "Label": "MVK",
+        "Value": "92",
+        "tipo": "motos"
+    },
+    {
+        "Label": "ORCA",
+        "Value": "93",
+        "tipo": "motos"
+    },
+    {
+        "Label": "PEGASSI",
+        "Value": "164",
+        "tipo": "motos"
+    },
+    {
+        "Label": "PEUGEOT",
+        "Value": "94",
+        "tipo": "motos"
+    },
+    {
+        "Label": "PIAGGIO",
+        "Value": "95",
+        "tipo": "motos"
+    },
+    {
+        "Label": "POLARIS",
+        "Value": "210",
+        "tipo": "motos"
+    },
+    {
+        "Label": "REGAL RAPTOR",
+        "Value": "173",
+        "tipo": "motos"
+    },
+    {
+        "Label": "RIGUETE",
+        "Value": "198",
+        "tipo": "motos"
+    },
+    {
+        "Label": "Royal Enfield",
+        "Value": "192",
+        "tipo": "motos"
+    },
+    {
+        "Label": "SANYANG",
+        "Value": "96",
+        "tipo": "motos"
+    },
+    {
+        "Label": "SHINERAY",
+        "Value": "134",
+        "tipo": "motos"
+    },
+    {
+        "Label": "SIAMOTO",
+        "Value": "97",
+        "tipo": "motos"
+    },
+    {
+        "Label": "SUNDOWN",
+        "Value": "98",
+        "tipo": "motos"
+    },
+    {
+        "Label": "SUZUKI",
+        "Value": "99",
+        "tipo": "motos"
+    },
+    {
+        "Label": "TARGOS",
+        "Value": "176",
+        "tipo": "motos"
+    },
+    {
+        "Label": "TIGER",
+        "Value": "187",
+        "tipo": "motos"
+    },
+    {
+        "Label": "TRAXX",
+        "Value": "119",
+        "tipo": "motos"
+    },
+    {
+        "Label": "TRIUMPH",
+        "Value": "100",
+        "tipo": "motos"
+    },
+    {
+        "Label": "VENTO",
+        "Value": "180",
+        "tipo": "motos"
+    },
+    {
+        "Label": "WUYANG",
+        "Value": "135",
+        "tipo": "motos"
+    },
+    {
+        "Label": "YAMAHA",
+        "Value": "101",
+        "tipo": "motos"
+    },
+    {
+        "Label": "AGRALE",
+        "Value": "102",
+        "tipo": "caminhoes"
+    },
+    {
+        "Label": "BEPOBUS",
+        "Value": "206",
+        "tipo": "caminhoes"
+    },
+    {
+        "Label": "CHEVROLET",
+        "Value": "103",
+        "tipo": "caminhoes"
+    },
+    {
+        "Label": "CICCOBUS",
+        "Value": "121",
+        "tipo": "caminhoes"
+    },
+    {
+        "Label": "DAF",
+        "Value": "197",
+        "tipo": "caminhoes"
+    },
+    {
+        "Label": "EFFA-JMC",
+        "Value": "179",
+        "tipo": "caminhoes"
+    },
+    {
+        "Label": "FIAT",
+        "Value": "104",
+        "tipo": "caminhoes"
+    },
+    {
+        "Label": "FORD",
+        "Value": "105",
+        "tipo": "caminhoes"
+    },
+    {
+        "Label": "FOTON",
+        "Value": "191",
+        "tipo": "caminhoes"
+    },
+    {
+        "Label": "GMC",
+        "Value": "106",
+        "tipo": "caminhoes"
+    },
+    {
+        "Label": "HYUNDAI",
+        "Value": "181",
+        "tipo": "caminhoes"
+    },
+    {
+        "Label": "IVECO",
+        "Value": "122",
+        "tipo": "caminhoes"
+    },
+    {
+        "Label": "MAN",
+        "Value": "184",
+        "tipo": "caminhoes"
+    },
+    {
+        "Label": "MARCOPOLO",
+        "Value": "108",
+        "tipo": "caminhoes"
+    },
+    {
+        "Label": "MASCARELLO",
+        "Value": "196",
+        "tipo": "caminhoes"
+    },
+    {
+        "Label": "MAXIBUS",
+        "Value": "194",
+        "tipo": "caminhoes"
+    },
+    {
+        "Label": "MERCEDES-BENZ",
+        "Value": "109",
+        "tipo": "caminhoes"
+    },
+    {
+        "Label": "NAVISTAR",
+        "Value": "110",
+        "tipo": "caminhoes"
+    },
+    {
+        "Label": "NEOBUS",
+        "Value": "111",
+        "tipo": "caminhoes"
+    },
+    {
+        "Label": "PUMA-ALFA",
+        "Value": "112",
+        "tipo": "caminhoes"
+    },
+    {
+        "Label": "SAAB-SCANIA",
+        "Value": "113",
+        "tipo": "caminhoes"
+    },
+    {
+        "Label": "SCANIA",
+        "Value": "114",
+        "tipo": "caminhoes"
+    },
+    {
+        "Label": "SHACMAN",
+        "Value": "193",
+        "tipo": "caminhoes"
+    },
+    {
+        "Label": "SINOTRUK",
+        "Value": "166",
+        "tipo": "caminhoes"
+    },
+    {
+        "Label": "VOLKSWAGEN",
+        "Value": "115",
+        "tipo": "caminhoes"
+    },
+    {
+        "Label": "VOLVO",
+        "Value": "116",
+        "tipo": "caminhoes"
+    },
+    {
+        "Label": "WALKBUS",
+        "Value": "144",
+        "tipo": "caminhoes"
     }
 ]

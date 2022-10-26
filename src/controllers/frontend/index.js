@@ -13,10 +13,9 @@ export default class Index {
     Fipe = null;
 
     async getMarcasID(labelTipoVeiculo, marca) {
-        console.log(labelTipoVeiculo)
-        console.log(marca)
+
         const found = marcas.find(element => element.tipo.toUpperCase() == labelTipoVeiculo.toUpperCase() && element.Label.toUpperCase() == marca.toUpperCase());
-        console.log(found)
+
         return found;
     }
     async getMesReferencia() {

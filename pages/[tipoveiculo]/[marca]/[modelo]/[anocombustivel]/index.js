@@ -24,7 +24,7 @@ export default function AnoCombustivel({ fipe }) {
                             </li>
                             <li aria-hidden="true" className="MuiBreadcrumbs-separator">/</li>
                             <li className="MuiBreadcrumbs-li">
-                                <Link href={"/" + Helper.LabelTipoVeiculo(fipe.tipoVeiculo).toLowerCase()}>
+                                <Link href={"/" + Helper.LabelTipoVeiculoURL(fipe.tipoVeiculo).toLowerCase()}>
                                     <a>
                                         <div className="breadcrumb-links">{Helper.LabelTipoVeiculo(fipe.tipoVeiculo)}</div>
                                     </a>
@@ -32,7 +32,7 @@ export default function AnoCombustivel({ fipe }) {
                             </li>
                             <li aria-hidden="true" className="MuiBreadcrumbs-separator">/</li>
                             <li className="MuiBreadcrumbs-li">
-                                <Link href={"/" + Helper.LabelTipoVeiculo(fipe.tipoVeiculo).toLowerCase() + "/" + Helper.NormalizeURL(fipe.labelMarca).toLowerCase()}>
+                                <Link href={"/" + Helper.LabelTipoVeiculoURL(fipe.tipoVeiculo).toLowerCase() + "/" + Helper.NormalizeURL(fipe.labelMarca).toLowerCase()}>
                                     <a>
                                         <div className="breadcrumb-links">{fipe.labelMarca}</div>
                                     </a>
@@ -40,7 +40,7 @@ export default function AnoCombustivel({ fipe }) {
                             </li>
                             <li aria-hidden="true" className="MuiBreadcrumbs-separator">/</li>
                             <li className="MuiBreadcrumbs-li">
-                                <Link href={"/" + Helper.LabelTipoVeiculo(fipe.tipoVeiculo).toLowerCase() + "/" + Helper.NormalizeURL(fipe.labelMarca).toLowerCase() + "/" + Helper.NormalizeURL(fipe.labelModelo).toLowerCase()}>
+                                <Link href={"/" + Helper.LabelTipoVeiculoURL(fipe.tipoVeiculo).toLowerCase() + "/" + Helper.NormalizeURL(fipe.labelMarca).toLowerCase() + "/" + Helper.NormalizeURL(fipe.labelModelo).toLowerCase()}>
                                     <a>
                                         <div className="breadcrumb-links">{fipe.labelModelo}</div>
                                     </a>
