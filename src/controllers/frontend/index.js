@@ -1,4 +1,4 @@
-import marcas from '/src/db/marcas.json';
+import dbmarcas from '/src/db/marcas.json';
 
 export default class Index {
 
@@ -14,7 +14,7 @@ export default class Index {
 
     async getMarcasID(labelTipoVeiculo, marca) {
 
-        const found = marcas.find(element => element.tipo.toUpperCase() == labelTipoVeiculo.toUpperCase() && element.Label.toUpperCase() == marca.toUpperCase());
+        const found = dbmarcas.find(element => element.tipo.toUpperCase() == labelTipoVeiculo.toUpperCase() && element.Label.toUpperCase() == marca.toUpperCase());
 
         return found;
     }
