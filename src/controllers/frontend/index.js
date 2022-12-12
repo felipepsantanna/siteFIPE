@@ -3,8 +3,8 @@ import dbmarcas from '/src/db/marcas.json';
 export default class Index {
 
     mesReferencia = {
-        "Codigo": 281,
-        "Mes": "Janeiro/2022 "
+        "Codigo": 292,
+        "Mes": "Dezembro/2022 "
     };
     url = 'https://api.rocktools.com.br/Fipe/';
     //url = " https://localhost:44328/Fipe/";

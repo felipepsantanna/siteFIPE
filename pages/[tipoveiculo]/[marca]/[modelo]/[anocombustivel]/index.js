@@ -62,7 +62,7 @@ export default function AnoCombustivel({ fipe }) {
                     {/*}
                     <p className="mes-referencia">Mês de referência: {fipe.mesReferencia}</p>
                     {*/}
-                    <p className="mes-referencia">Mês de referência: Julho 2022</p>
+                    <p className="mes-referencia">Mês de referência: Dezembro 2022</p>
                 </article>
             </section>
         </div>
