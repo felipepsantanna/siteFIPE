@@ -11,6 +11,7 @@ export default class Index {
     marcas = null;
     modelos = null;
     Fipe = null;
+    related = null;
 
     async getMarcasID(labelTipoVeiculo, marca) {
 
@@ -71,6 +72,23 @@ export default class Index {
             })
             .then(json => {
                 this.Fipe = json;
+            })
+            .catch((error) => {
+                console.log('error: ' + error);
+                return error;
+            });
+    }
+
+    async getRelated(codigoMesReferencia, tipoVeiculo, codigoMarca, codigoModelo, codigoAno) {
+
+        var urlAPI = new URL(`${this.url}Related?codigoMesReferencia=${codigoMesReferencia}&tipoVeiculo=${tipoVeiculo}&codigoMarca=${codigoMarca}&codigoModelo=${codigoModelo}&codigoAno=${codigoAno}`);
+
+        const _Fipe = await fetch(urlAPI)
+            .then(response => {
+                return response.json();
+            })
+            .then(json => {
+                this.related = json;
             })
             .catch((error) => {
                 console.log('error: ' + error);

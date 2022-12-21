@@ -2,8 +2,10 @@ import React from 'react';
 import Link from 'next/link';
 import Head from '/src/components/head';
 import Header from '/src/components/header';
+import Related from '/src/components/related';
 import Api from '/src/controllers/frontend';
 import Helper from '/src/controllers/helper';
+
 
 export default function AnoCombustivel({ fipe }) {
     return <React.Fragment>
@@ -65,6 +67,9 @@ export default function AnoCombustivel({ fipe }) {
                     <p className="mes-referencia">Mês de referência: Dezembro 2022</p>
                 </article>
             </section>
+
+            <Related codigoMesReferencia={fipe.codigoMesReferencia} tipoVeiculo={fipe.tipoVeiculo} codigoMarca={fipe.codigoMarca} codigoModelo={fipe.codigoModelo} codigoAno={fipe.codigoAno}></Related>
+
         </div>
     </React.Fragment>
 }
