@@ -85,13 +85,14 @@ export async function getServerSideProps(context) {
     await api.getUrlFipe(url);
 
     const fipe = api.Fipe[0];
+    const reverseFipe = api.Fipe.reverse();
 
     const chartData = {
-        labels: api.Fipe.map(item => item.mesReferencia),
+        labels: reverseFipe.map(item => item.mesReferencia),
         datasets: [
             {
                 label: 'Histórico de preços Fipe',
-                data: api.Fipe.map(item => Number(item.valor.replace('.', '').replace(',', '.').replace('R$ ', ''))),
+                data: reverseFipe.map(item => Number(item.valor.replace('.', '').replace(',', '.').replace('R$ ', ''))),
                 backgroundColor: 'rgb(0, 154, 138)'
             }
         ]

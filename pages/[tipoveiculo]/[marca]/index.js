@@ -65,7 +65,6 @@ export default function AnoCombustivel({ marca }) {
 export async function getServerSideProps(context) {
 
     const api = new Api();
-    console.log(context.params)
     const marca = await api.getMarcasID(context.params.tipoveiculo, context.params.marca.replace('-', ' '));
 
     return {

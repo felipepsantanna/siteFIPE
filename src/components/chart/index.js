@@ -26,7 +26,22 @@ export default function HistoryChart({ chartData }) {
 
     const [options, setOptions] = useState({
         responsive: true,
+        plugins: {
+            tooltip: {
+                callbacks: {
+                    label: (tooltipItem, data) => {
+
+                        return "Fipe " + Number(tooltipItem.formattedValue.replace('.', '')).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
+                    },
+                },
+            }
+        },
+        title: {
+            display: true,
+            text: 'Histórico de preços Fipe'
+        },
     });
+
 
     return (
         <div>
