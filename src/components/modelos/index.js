@@ -5,12 +5,11 @@ import Helper from '/src/controllers/helper';
 
 export default function Modelos({ marca }) {
     const [listaModelos, setListaModelos] = useState(null);
-    console.log(marca)
     useEffect(() => {
         async function loadModelos() {
             const api = new Api();
             const IDtipoVeiculo = Helper.IDTipoVeiculo(marca.tipo);
-            await api.getModelos(api.mesReferencia.Codigo, IDtipoVeiculo, marca.Value); 
+            await api.getModelos(api.mesReferencia.Codigo, IDtipoVeiculo, marca.Value);
             setListaModelos(api.modelos);
         }
 
@@ -24,7 +23,7 @@ export default function Modelos({ marca }) {
 
                 {
                     listaModelos && listaModelos.map(m => {
-                        
+
                         return <li key={m.codigoModelo}>
                             <Link href={m.URL}>
                                 <a>

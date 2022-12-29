@@ -13,7 +13,6 @@ export default function Related({ codigoMesReferencia, tipoVeiculo, codigoMarca,
 
             await api.getRelated(codigoMesReferencia, tipoVeiculo, codigoMarca, codigoModelo, codigoAno);
             setListaRelated(api.related);
-            console.log(api.related)
         }
 
         loadRelated();

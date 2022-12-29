@@ -5,9 +5,10 @@ import Header from '/src/components/header';
 import Related from '/src/components/related';
 import Api from '/src/controllers/frontend';
 import Helper from '/src/controllers/helper';
+import Grafico from '/src/components/chart';
 
 
-export default function AnoCombustivel({ fipe }) {
+export default function AnoCombustivel({ fipe, chartData }) {
     return <React.Fragment>
         <Head title={"Tabela Fipe " + fipe.labelMarca + " " + fipe.labelModelo + " " + fipe.labelAno} description={"Na Tabela FIPE do " + fipe.labelMarca + " " + fipe.labelModelo + " " + fipe.labelAno + " você pode consultar de maneira rápida e prática preços de " + fipe.labelMarca + " novos e usados. Confira já!"} />
         <Header />
@@ -68,6 +69,8 @@ export default function AnoCombustivel({ fipe }) {
                 </article>
             </section>
 
+            <Grafico chartData={chartData} />
+
             <Related codigoMesReferencia={fipe.codigoMesReferencia} tipoVeiculo={fipe.tipoVeiculo} codigoMarca={fipe.codigoMarca} codigoModelo={fipe.codigoModelo} codigoAno={fipe.codigoAno}></Related>
 
         </div>
@@ -83,9 +86,20 @@ export async function getServerSideProps(context) {
 
     const fipe = api.Fipe[0];
 
+    const chartData = {
+        labels: api.Fipe.map(item => item.mesReferencia),
+        datasets: [
+            {
+                label: 'Histórico de preços Fipe',
+                data: api.Fipe.map(item => Number(item.valor.replace('.', '').replace(',', '.').replace('R$ ', ''))),
+                backgroundColor: 'rgb(0, 154, 138)'
+            }
+        ]
+    };
     return {
         props: {
-            fipe
+            fipe,
+            chartData
         }
     }
 }
