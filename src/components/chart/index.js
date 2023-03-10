@@ -52,8 +52,6 @@ export default function HistoryChart({ chartData }) {
                     </div>
                     <div className='div-chart'>
                         <Line options={options} data={chartData} />
-
-
                     </div>
                 </article>
             </section>

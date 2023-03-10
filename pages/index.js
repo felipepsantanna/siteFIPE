@@ -158,7 +158,7 @@ export default function Home() {
 
 
           <div className="box">
-            <h2 className="h2">Qual veículo você gostaria de comprar ou vender?</h2>
+            <p className="h2">Qual veículo você gostaria de comprar ou vender?</p>
             <div className="tipoVeiculo">
               <div className="MuiButtonBase-root MuiChip-root button MuiChip-colorSecondary MuiChip-clickableColorSecondary MuiChip-clickable" role="button" onClick={(e) => onClickTiposVeiculos(e)} data-value="1">
                 <span className="MuiChip-label">Carro</span>
@@ -239,37 +239,18 @@ export default function Home() {
 
 
         <article className="article-search">
-          <h2>Tabela Fipe: o que é?</h2>
-          <p>É comum a desinformação na internet sobre vários assuntos e, sabendo disso, nós trouxemos neste artigo, informações importantes acerca da <strong>Tabela Fipe</strong>, como ela costuma funcionar e qual a sua função em negociações.
+          <h2>O que é a Tabela FIPE?</h2>
+          <p>A Tabela FIPE é uma instituição sem fins lucrativos criada com o objetivo de fornecer informações precisas sobre preços de veículos, imóveis, motocicletas e outros bens de consumo no Brasil. A Tabela FIPE é amplamente utilizada como referência para avaliar o valor de compra e venda de bens. </p>
 
-            Destacamos que a <strong>Tabela Fipe</strong> foi criada pela Fundação Instituto de Pesquisas Econômicas - FIPE, por isso sua denominação. Além disso, esse instituto é o principal responsável pela referência no mercado de carros seminovos ou usados, servindo normalmente como base para consulta de valores em negociações como seguros ou contratos.
-          </p>
-          <h3>A origem da Tabela Fipe</h3>
-          Criada em 1973 de modo a servir como base de valores para negociações de carros, tal tabela foi originada visando ajudar a Faculdade de Economia, Administração e Contabilidade da Universidade de São Paulo.
+          <h2>Como usar a Tabela FIPE? </h2>
+          <p>Usar a Tabela FIPE é simples e fácil. Basta acessar o site da instituição e escolher o tipo de bem que você deseja consultar. Em seguida, você precisará selecionar a marca, modelo, ano e versão do bem em questão. Após fazer essas seleções, a Tabela FIPE fornecerá o valor médio de mercado para o bem em questão. </p>
 
-          <h3>Mas como funciona a Tabela Fipe?</h3>
+          <h2>Como a Tabela FIPE é atualizada? </h2>
+          <p>A Tabela FIPE é atualizada mensalmente com base em dados coletados de revendedores, concessionárias, leilões e outras fontes confiáveis. A atualização da Tabela FIPE é realizada com o objetivo de garantir que as informações fornecidas sejam precisas e atualizadas. </p>
 
-          O funcionamento da <strong>Tabela Fipe</strong> é bastante simples, mas é rigorosa. Ela separa apenas a média dos valores dos veículos. Ou seja: são considerados os valores médios, excluindo os que estão em extremos: preços altos ou baixos demais para o mercado.
-
-          Destaca-se que a <strong>Tabela Fipe</strong> é apenas uma espécie de “adereço”, ou seja, um parâmetro para o planejamento estratégico de venda de algum veículo.
-
-          Assim, a tabela costuma expressar apenas uma média nacional dos valores; organizando e observando aspectos como o estado do veículo, sua conservação, o ano e modelo. São averiguados veículos como automóveis, motos, motonetas, e caminhões, sejam eles  usados, seminovos ou novos no mercado brasileiro.
-
-          Como um parâmetro, a Tabela Fipe é bastante usada por pessoas comuns que buscam vender seu veículo com um valor justo e coerente com a demanda e a oferta do mercado nacional.
-
-          O ano do carro, moto, caminhão ou motoneta é usado como um dos critérios para determinar o valor do veículo, além dele, usam-se também o modelo, condições do veículo, se é quatro ou duas portas, motor, etc.
-
-          Os valores são sempre divulgados na tabela em reais do mês e ano de referência. É comum que a tabela sofra alterações com frequência e influência da situação econômica do país.
-
-          <h3>O valor dos automóveis aumentou?</h3>
-          Segundo informações mais recentes, no presente ano (2022), houve um aumento de 21% no valor dos automóveis. Isso ocorreu devido a uma procura mais intensa e uma oferta de veículos no mercado inferior à da procura.
-
-          Contudo, apesar de o valor dos automóveis ter ficado elevado, uma má notícia também surgiu: o aumento no valor do IPVA também ocorreu. Desse modo, tanto quem comercializa carros seminovos ou usados, tanto quem apenas utiliza, sentiram impactos sérios nas finanças quando o assunto é automóvel.
-
-          Portanto, vale a pena observar frequentemente os valores determinados na tabela, a fim de evitar perdas financeiras ou precificar o veículo de maneira equivocada, evitando frustrações e arrependimentos no pós-venda.
-
-          Também para quem compra, é imprescindível comparar valores e modelos dos carros, motos, caminhões ou veículos afins. A tabela auxilia em grande parte das negociações, servindo como um respaldo para argumentação no momento da compra do veículo.
-
+          <h2>Por que a Tabela FIPE é importante? </h2>
+          <p>A Tabela FIPE é importante porque fornece informações precisas e atualizadas sobre preços de bens de consumo no Brasil. Além disso, a Tabela FIPE é amplamente utilizada como referência para avaliar o valor de compra e venda de bens, o que ajuda a garantir transações justas e equilibradas.
+            É uma ferramenta valiosa para quem deseja avaliar o valor de bens de consumo no Brasil. Com informações precisas e atualizadas, a Tabela FIPE ajuda a garantir transações justas e equilibradas no mercado de bens de consumo. Além disso, usar a Tabela FIPE é simples e fácil, tornando-a uma ferramenta acessível para todos. </p>
 
         </article>
       </section>
