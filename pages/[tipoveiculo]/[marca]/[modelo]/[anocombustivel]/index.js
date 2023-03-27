@@ -83,7 +83,7 @@ export async function getServerSideProps(context) {
 
     const api = new Api();
     await api.getUrlFipe(url);
-
+    console.log(api.Fipe);
     const fipe = api.Fipe[0];
     const reverseFipe = api.Fipe.reverse();
 

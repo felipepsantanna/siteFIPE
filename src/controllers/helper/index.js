@@ -5,16 +5,16 @@ const Helper = {
         return labels[idTipoVeiculo];
     },
 
-    LabelSingularTipoVeiculo(idTipoVeiculo){
+    LabelSingularTipoVeiculo(idTipoVeiculo) {
         const labels = ["", "carro", "moto", "caminhão"]
         return labels[idTipoVeiculo];
     },
-    UmUmaLabelTipoVeiculo(idTipoVeiculo){
+    UmUmaLabelTipoVeiculo(idTipoVeiculo) {
         const labels = ["", "um", "uma", "um"]
         return labels[idTipoVeiculo];
     },
 
-    OALabelTipoVeiculo(idTipoVeiculo){
+    OALabelTipoVeiculo(idTipoVeiculo) {
         const labels = ["", "o", "a", "o"]
         return labels[idTipoVeiculo];
     },

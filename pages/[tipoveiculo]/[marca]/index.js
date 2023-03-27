@@ -51,7 +51,7 @@ export default function AnoCombustivel({ marca }) {
                     </div>
 
                     <h1 className="h1">Tabela Fipe {marca.Label} </h1>
-                    <h2 className="h2">Consulte o preço de carros novos e usados da {marca.Label}</h2>
+                    <h2 className="h2">Consulte o preço de {marca.tipo} novos e usados da {marca.Label}</h2>
 
                     <Modelos marca={marca} />
 
@@ -65,7 +65,7 @@ export default function AnoCombustivel({ marca }) {
 export async function getServerSideProps(context) {
 
     const api = new Api();
-    const marca = await api.getMarcasID(context.params.tipoveiculo, context.params.marca.replace('-', ' '));
+    const marca = await api.getMarcasID(context.params.tipoveiculo, context.params.marca);
 
     return {
         props: {
