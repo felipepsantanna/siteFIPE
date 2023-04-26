@@ -1,0 +1,4 @@
+#robots.txt gerado em
+#rocktools.com.br/gerador-robots-txt.html 
+Sitemap: https://tabelafipe.blog.br/sitemap.xml
+User-agent: * 
