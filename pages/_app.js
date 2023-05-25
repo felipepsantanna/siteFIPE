@@ -1,5 +1,6 @@
 import App, { Container } from 'next/app'
 import React from 'react'
+import Head from 'next/head'
 import TagManager from 'react-gtm-module'
 import '../styles/globals.css'
 
@@ -16,7 +17,12 @@ class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props
     return (
+      <>
+      <Head>
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      </Head>
       <Component {...pageProps} />
+      </>
     )
   }
 }

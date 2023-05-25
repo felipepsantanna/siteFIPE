@@ -20,7 +20,7 @@ export default function AnoCombustivel({ marca }) {
                     <nav className="MuiTypography-root MuiBreadcrumbs-root MuiTypography-body1 MuiTypography-colorTextSecondary">
                         <ol className="MuiBreadcrumbs-ol">
                             <li className="MuiBreadcrumbs-li">
-                                <Link href="/">
+                                <Link href="/" legacyBehavior>
                                     <a>
                                         <div className="breadcrumb-inicio">Início</div>
                                     </a>
@@ -28,7 +28,7 @@ export default function AnoCombustivel({ marca }) {
                             </li>
                             <li aria-hidden="true" className="MuiBreadcrumbs-separator">/</li>
                             <li className="MuiBreadcrumbs-li">
-                                <Link href={"/" + marca.tipo}>
+                                <Link href={"/" + marca.tipo} legacyBehavior>
                                     <a>
                                         <div className="breadcrumb-links">{marca.tipo}</div>
                                     </a>

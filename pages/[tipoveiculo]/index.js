@@ -130,89 +130,95 @@ export default function TipoVeiculo({ tipoVeiculo, labelTipoVeiculo, LabelSingul
     }
 
 
-    return <React.Fragment>
-        <Head title={"Tabele FIPE de " + labelTipoVeiculo + ": Preços de " + labelTipoVeiculo + " novos e usados"} description={"Na Tabela FIPE de " + labelTipoVeiculo + " você pode consultar de maneira rápida e prática preços de " + labelTipoVeiculo + " novos e usados. Confira já!"} />
-        <Header />
+    return (
+        <React.Fragment>
+            <Head title={"Tabele FIPE de " + labelTipoVeiculo + ": Preços de " + labelTipoVeiculo + " novos e usados"} description={"Na Tabela FIPE de " + labelTipoVeiculo + " você pode consultar de maneira rápida e prática preços de " + labelTipoVeiculo + " novos e usados. Confira já!"} />
+            <Header />
 
-        <div id="section-wrapper" className="sectionWrapper">
-            <section className="section-search">
-
-
-                <article className="article-search">
-
-                    <nav className="MuiTypography-root MuiBreadcrumbs-root MuiTypography-body1 MuiTypography-colorTextSecondary">
-                        <ol className="MuiBreadcrumbs-ol">
-                            <li className="MuiBreadcrumbs-li">
-                                <Link href="/">
-                                    <a>
-                                        <div className="breadcrumb-inicio">Tabela Fipe</div>
-                                    </a>
-                                </Link>
-                            </li>
-                            <li aria-hidden="true" className="MuiBreadcrumbs-separator">/</li>
-                            <li className="MuiBreadcrumbs-li">
-                                <div className="breadcrumb-links">Tabela Fipe {Helper.CapitalizeFirstLetter(labelTipoVeiculo)}</div>
-                            </li>
-                        </ol>
-                    </nav>
-
-                    <h1 className="h1">Tabela Fipe de {Helper.CapitalizeFirstLetter(labelTipoVeiculo)}</h1>
-                    <h2 className="h2">Consulte o valor de {Helper.UmUmaLabelTipoVeiculo(tipoVeiculo)} {LabelSingulgarTipoVeiculo} de forma gratuita</h2>
+            <div id="section-wrapper" className="sectionWrapper">
+                <section className="section-search">
 
 
+                    <article className="article-search">
 
-                    <div className="box">
-                        <h2 className="h2">Qual veículo você gostaria de comprar ou vender?</h2>
-                        <div className="dropboxes">
-                            <select defaultValue={marcaVeiculo} name="marcaVeiculo" id="marcaVeiculo" className="form-control" data-size="7" data-style="btn btn-simple btn-round" title="marca Veiculo" onChange={(e) => onMarcasChange(e)}>
-                                <option value="0" disabled>Marcas</option>
-                                {listaMarcaVeiculo &&
-                                    listaMarcaVeiculo.map((element) => {
-                                        return <option key={element.Value} value={element.Value}>{element.Label}</option>
-                                    })
-                                }
-                            </select>
+                        <nav className="MuiTypography-root MuiBreadcrumbs-root MuiTypography-body1 MuiTypography-colorTextSecondary">
+                            <ol className="MuiBreadcrumbs-ol">
+                                <li className="MuiBreadcrumbs-li">
+                                    <Link href="/" legacyBehavior>
+                                        <a>
+                                            <div className="breadcrumb-inicio">Tabela Fipe</div>
+                                        </a>
+                                    </Link>
+                                </li>
+                                <li aria-hidden="true" className="MuiBreadcrumbs-separator">/</li>
+                                <li className="MuiBreadcrumbs-li">
+                                    <div className="breadcrumb-links">Tabela Fipe {Helper.CapitalizeFirstLetter(labelTipoVeiculo)}</div>
+                                </li>
+                            </ol>
+                        </nav>
 
-                            <select defaultValue={modeloVeiculo} name="modeloVeiculo" id="modeloVeiculo" className="form-control" data-size="7" data-style="btn btn-simple btn-round" title="Modelo Veiculo" onChange={(e) => onModeloChange(e)} disabled={disabledModeloVeiculo}>
-                                <option value="0" disabled>Modelo</option>
-                                {listaModeloVeiculo &&
-                                    listaModeloVeiculo.map((element) => {
-                                        return <option key={element.codigoModelo} value={element.codigoModelo}>{element.labelModelo}</option>
-                                    })
-                                }
-                            </select>
+                        <h1 className="h1">Tabela Fipe de {Helper.CapitalizeFirstLetter(labelTipoVeiculo)}</h1>
+                        <h2 className="h2">Consulte o valor de {Helper.UmUmaLabelTipoVeiculo(tipoVeiculo)} {LabelSingulgarTipoVeiculo} de forma gratuita</h2>
 
-                            <select defaultValue={anoVeiculo} name="anoVeiculo" id="anoVeiculo" className="form-control" data-size="7" data-style="btn btn-simple btn-round" title="Ano Veiculo" onChange={(e) => onAnoChange(e)} disabled={disabledAnoVeiculo}>
-                                <option value="0" disabled>Ano e combustível</option>
-                                {listaAnoVeiculo &&
-                                    listaAnoVeiculo.map((element) => {
-                                        return <option key={element.codigoAno} value={element.codigoAno}>{element.labelAno}</option>
-                                    })
-                                }
-                            </select>
-                        </div>
-                        <div className="consultarPrecos">
-                            <Link href={urlFIPE}>
-                                <a id="btnConsultarPreco" className="MuiButtonBase-root MuiButton-root jss290 MuiButton-contained jss291 MuiButton-fullWidth Mui-disabled" type="button" >
+
+
+                        <div className="box">
+                            <h2 className="h2">Qual veículo você gostaria de comprar ou vender?</h2>
+                            <div className="dropboxes">
+                                <select defaultValue={marcaVeiculo} name="marcaVeiculo" id="marcaVeiculo" className="form-control" data-size="7" data-style="btn btn-simple btn-round" title="marca Veiculo" onChange={(e) => onMarcasChange(e)}>
+                                    <option value="0" disabled>Marcas</option>
+                                    {listaMarcaVeiculo &&
+                                        listaMarcaVeiculo.map((element) => {
+                                            return <option key={element.Value} value={element.Value}>{element.Label}</option>
+                                        })
+                                    }
+                                </select>
+
+                                <select defaultValue={modeloVeiculo} name="modeloVeiculo" id="modeloVeiculo" className="form-control" data-size="7" data-style="btn btn-simple btn-round" title="Modelo Veiculo" onChange={(e) => onModeloChange(e)} disabled={disabledModeloVeiculo}>
+                                    <option value="0" disabled>Modelo</option>
+                                    {listaModeloVeiculo &&
+                                        listaModeloVeiculo.map((element) => {
+                                            return <option key={element.codigoModelo} value={element.codigoModelo}>{element.labelModelo}</option>
+                                        })
+                                    }
+                                </select>
+
+                                <select defaultValue={anoVeiculo} name="anoVeiculo" id="anoVeiculo" className="form-control" data-size="7" data-style="btn btn-simple btn-round" title="Ano Veiculo" onChange={(e) => onAnoChange(e)} disabled={disabledAnoVeiculo}>
+                                    <option value="0" disabled>Ano e combustível</option>
+                                    {listaAnoVeiculo &&
+                                        listaAnoVeiculo.map((element) => {
+                                            return <option key={element.codigoAno} value={element.codigoAno}>{element.labelAno}</option>
+                                        })
+                                    }
+                                </select>
+                            </div>
+                            <div className="consultarPrecos">
+                                <Link
+                                    href={urlFIPE}
+                                    id="btnConsultarPreco"
+                                    className="MuiButtonBase-root MuiButton-root jss290 MuiButton-contained jss291 MuiButton-fullWidth Mui-disabled"
+                                    type="button">
+
                                     <span className="MuiButton-label">Consultar preço</span>
                                     <span className="MuiTouchRipple-root"></span>
-                                </a>
-                            </Link>
+
+                                </Link>
+                            </div>
                         </div>
-                    </div>
 
 
 
 
-                    <Consulte />
-                </article>
-            </section>
+                        <Consulte />
+                    </article>
+                </section>
 
-            <Marcas labelTipoVeiculo={labelTipoVeiculo} listaMarcaVeiculo={listaMarcaVeiculo} UmUmaLabelTipoVeiculo={Helper.UmUmaLabelTipoVeiculo(tipoVeiculo)} LabelSingulgarTipoVeiculo={LabelSingulgarTipoVeiculo}/>
-        </div>
+                <Marcas labelTipoVeiculo={labelTipoVeiculo} listaMarcaVeiculo={listaMarcaVeiculo} UmUmaLabelTipoVeiculo={Helper.UmUmaLabelTipoVeiculo(tipoVeiculo)} LabelSingulgarTipoVeiculo={LabelSingulgarTipoVeiculo}/>
+            </div>
 
 
-    </React.Fragment>
+        </React.Fragment>
+    );
 }
 
 

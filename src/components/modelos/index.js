@@ -23,9 +23,9 @@ export default function Modelos({ marca }) {
 
                 {
                     listaModelos && listaModelos.map(m => {
-                        console.log('chegamos aqui?');
+                       
                         return <li key={m.codigoModelo}>
-                            <Link href={m.URL}>
+                            <Link href={m.URL} legacyBehavior>
                                 <a>
                                     <div className="item-modelo">
                                         <div className="item-modelo-marca">

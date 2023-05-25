@@ -137,124 +137,130 @@ export default function Home() {
   }
 
 
-  return <React.Fragment>
-    <Head title="Tabela FIPE: Preços de carros novos e usados" description="Tabela FIPE atualizada até Junho de 2022. Consulte carros, motos e caminhões por marca, modelo e ano. Veja os valores dos anos anteriores." />
-    <Header />
+  return (
+    <React.Fragment>
+      <Head title="Tabela FIPE: Preços de carros novos e usados" description="Tabela FIPE atualizada até Junho de 2022. Consulte carros, motos e caminhões por marca, modelo e ano. Veja os valores dos anos anteriores." />
+      <Header />
 
-    <div id="section-wrapper" className="sectionWrapper">
-      <section className="section-search">
-
-
-        <article className="article-search">
-
-          <div className="article-search-div1">
+      <div id="section-wrapper" className="sectionWrapper">
+        <section className="section-search">
 
 
-          </div>
+          <article className="article-search">
 
-          <h1 className="h1">Tabela Fipe</h1>
-          <h2 className="h2">Consulte o valor de um automóvel de forma gratuita</h2>
-
+            <div className="article-search-div1">
 
 
-          <div className="box">
-            <p className="h2">Qual veículo você gostaria de comprar ou vender?</p>
-            <div className="tipoVeiculo">
-              <div className="MuiButtonBase-root MuiChip-root button MuiChip-colorSecondary MuiChip-clickableColorSecondary MuiChip-clickable" role="button" onClick={(e) => onClickTiposVeiculos(e)} data-value="1">
-                <span className="MuiChip-label">Carro</span>
-                <span className="MuiTouchRipple-root"></span>
-              </div>
-              <div className="MuiButtonBase-root MuiChip-root button MuiChip-clickableColorSecondary MuiChip-outlined MuiChip-outlinedSecondary MuiChip-clickable" role="button" onClick={(e) => onClickTiposVeiculos(e)} data-value="2">
-                <span className="MuiChip-label">Moto</span>
-                <span className="MuiTouchRipple-root"></span>
-              </div>
-              <div className="MuiButtonBase-root MuiChip-root button MuiChip-clickableColorSecondary MuiChip-outlined MuiChip-outlinedSecondary MuiChip-clickable" role="button" onClick={(e) => onClickTiposVeiculos(e)} data-value="3">
-                <span className="MuiChip-label">Caminhão</span>
-                <span className="MuiTouchRipple-root"></span>
-              </div>
             </div>
-            <div className="dropboxes">
-              <select defaultValue={marcaVeiculo} name="marcaVeiculo" id="marcaVeiculo" className="form-control" data-size="7" data-style="btn btn-simple btn-round" title="marca Veiculo" onChange={(e) => onMarcasChange(e)}>
-                <option value="0" disabled>Marcas</option>
-                {listaMarcaVeiculo &&
-                  listaMarcaVeiculo.map((element) => {
-                    return <option key={element.Value} value={element.Value}>{element.Label}</option>
-                  })
-                }
-              </select>
 
-              <select defaultValue={modeloVeiculo} name="modeloVeiculo" id="modeloVeiculo" className="form-control" data-size="7" data-style="btn btn-simple btn-round" title="Modelo Veiculo" onChange={(e) => onModeloChange(e)} disabled={disabledModeloVeiculo}>
-                <option value="0" disabled>Modelo</option>
-                {listaModeloVeiculo &&
-                  listaModeloVeiculo.map((element) => {
-                    return <option key={element.codigoModelo} value={element.codigoModelo}>{element.labelModelo}</option>
-                  })
-                }
-              </select>
+            <h1 className="h1">Tabela Fipe</h1>
+            <h2 className="h2">Consulte o valor de um automóvel de forma gratuita</h2>
 
-              <select defaultValue={anoVeiculo} name="anoVeiculo" id="anoVeiculo" className="form-control" data-size="7" data-style="btn btn-simple btn-round" title="Ano Veiculo" onChange={(e) => onAnoChange(e)} disabled={disabledAnoVeiculo}>
-                <option value="0" disabled>Ano e combustível</option>
-                {listaAnoVeiculo &&
-                  listaAnoVeiculo.map((element) => {
-                    return <option key={element.codigoAno} value={element.codigoAno}>{element.labelAno}</option>
-                  })
-                }
-              </select>
-            </div>
-            <div className="consultarPrecos">
-              <Link href={urlFIPE}>
-                <a id="btnConsultarPreco" className="MuiButtonBase-root MuiButton-root jss290 MuiButton-contained jss291 MuiButton-fullWidth Mui-disabled" type="button" >
+
+
+            <div className="box">
+              <p className="h2">Qual veículo você gostaria de comprar ou vender?</p>
+              <div className="tipoVeiculo">
+                <div className="MuiButtonBase-root MuiChip-root button MuiChip-colorSecondary MuiChip-clickableColorSecondary MuiChip-clickable" role="button" onClick={(e) => onClickTiposVeiculos(e)} data-value="1">
+                  <span className="MuiChip-label">Carro</span>
+                  <span className="MuiTouchRipple-root"></span>
+                </div>
+                <div className="MuiButtonBase-root MuiChip-root button MuiChip-clickableColorSecondary MuiChip-outlined MuiChip-outlinedSecondary MuiChip-clickable" role="button" onClick={(e) => onClickTiposVeiculos(e)} data-value="2">
+                  <span className="MuiChip-label">Moto</span>
+                  <span className="MuiTouchRipple-root"></span>
+                </div>
+                <div className="MuiButtonBase-root MuiChip-root button MuiChip-clickableColorSecondary MuiChip-outlined MuiChip-outlinedSecondary MuiChip-clickable" role="button" onClick={(e) => onClickTiposVeiculos(e)} data-value="3">
+                  <span className="MuiChip-label">Caminhão</span>
+                  <span className="MuiTouchRipple-root"></span>
+                </div>
+              </div>
+              <div className="dropboxes">
+                <select defaultValue={marcaVeiculo} name="marcaVeiculo" id="marcaVeiculo" className="form-control" data-size="7" data-style="btn btn-simple btn-round" title="marca Veiculo" onChange={(e) => onMarcasChange(e)}>
+                  <option value="0" disabled>Marcas</option>
+                  {listaMarcaVeiculo &&
+                    listaMarcaVeiculo.map((element) => {
+                      return <option key={element.Value} value={element.Value}>{element.Label}</option>
+                    })
+                  }
+                </select>
+
+                <select defaultValue={modeloVeiculo} name="modeloVeiculo" id="modeloVeiculo" className="form-control" data-size="7" data-style="btn btn-simple btn-round" title="Modelo Veiculo" onChange={(e) => onModeloChange(e)} disabled={disabledModeloVeiculo}>
+                  <option value="0" disabled>Modelo</option>
+                  {listaModeloVeiculo &&
+                    listaModeloVeiculo.map((element) => {
+                      return <option key={element.codigoModelo} value={element.codigoModelo}>{element.labelModelo}</option>
+                    })
+                  }
+                </select>
+
+                <select defaultValue={anoVeiculo} name="anoVeiculo" id="anoVeiculo" className="form-control" data-size="7" data-style="btn btn-simple btn-round" title="Ano Veiculo" onChange={(e) => onAnoChange(e)} disabled={disabledAnoVeiculo}>
+                  <option value="0" disabled>Ano e combustível</option>
+                  {listaAnoVeiculo &&
+                    listaAnoVeiculo.map((element) => {
+                      return <option key={element.codigoAno} value={element.codigoAno}>{element.labelAno}</option>
+                    })
+                  }
+                </select>
+              </div>
+              <div className="consultarPrecos">
+                <Link
+                  href={urlFIPE}
+                  id="btnConsultarPreco"
+                  className="MuiButtonBase-root MuiButton-root jss290 MuiButton-contained jss291 MuiButton-fullWidth Mui-disabled"
+                  type="button">
+
                   <span className="MuiButton-label">Consultar preço</span>
                   <span className="MuiTouchRipple-root"></span>
-                </a>
-              </Link>
+
+                </Link>
+              </div>
             </div>
-          </div>
 
 
 
 
-          <div className="consulte-tambem">
-            <p className="por">Consulte também por:</p>
-            <div className="links">
-              <Link href="/carros">
-                <a className="link">Tabela Fipe Carros </a>
-              </Link>
-              <p className="espacos">,</p>
-              <Link href="/motos">
-                <a className="link">Tabela Fipe Motos </a>
-              </Link>
-              <p className="espacos">&nbsp;e</p>
-              <Link href="/caminhoes">
-                <a className="link">Tabela Fipe Caminhões </a>
-              </Link>
+            <div className="consulte-tambem">
+              <p className="por">Consulte também por:</p>
+              <div className="links">
+                <Link href="/carros" className="link">
+                  Tabela Fipe Carros 
+                </Link>
+                <p className="espacos">,</p>
+                <Link href="/motos" className="link">
+                  Tabela Fipe Motos 
+                </Link>
+                <p className="espacos">&nbsp;e</p>
+                <Link href="/caminhoes" className="link">
+                  Tabela Fipe Caminhões 
+                </Link>
+              </div>
             </div>
-          </div>
-        </article>
-      </section>
-    </div>
+          </article>
+        </section>
+      </div>
 
-    <div id="section-wrapper" className="sectionWrapper">
-      <section className="section-search">
+      <div id="section-wrapper" className="sectionWrapper">
+        <section className="section-search">
 
 
-        <article className="article-search">
-          <h2>O que é a Tabela FIPE?</h2>
-          <p>A Tabela FIPE é uma instituição sem fins lucrativos criada com o objetivo de fornecer informações precisas sobre preços de veículos, imóveis, motocicletas e outros bens de consumo no Brasil. A Tabela FIPE é amplamente utilizada como referência para avaliar o valor de compra e venda de bens. </p>
+          <article className="article-search">
+            <h2>O que é a Tabela FIPE?</h2>
+            <p>A Tabela FIPE é uma instituição sem fins lucrativos criada com o objetivo de fornecer informações precisas sobre preços de veículos, imóveis, motocicletas e outros bens de consumo no Brasil. A Tabela FIPE é amplamente utilizada como referência para avaliar o valor de compra e venda de bens. </p>
 
-          <h2>Como usar a Tabela FIPE? </h2>
-          <p>Usar a Tabela FIPE é simples e fácil. Basta acessar o site da instituição e escolher o tipo de bem que você deseja consultar. Em seguida, você precisará selecionar a marca, modelo, ano e versão do bem em questão. Após fazer essas seleções, a Tabela FIPE fornecerá o valor médio de mercado para o bem em questão. </p>
+            <h2>Como usar a Tabela FIPE? </h2>
+            <p>Usar a Tabela FIPE é simples e fácil. Basta acessar o site da instituição e escolher o tipo de bem que você deseja consultar. Em seguida, você precisará selecionar a marca, modelo, ano e versão do bem em questão. Após fazer essas seleções, a Tabela FIPE fornecerá o valor médio de mercado para o bem em questão. </p>
 
-          <h2>Como a Tabela FIPE é atualizada? </h2>
-          <p>A Tabela FIPE é atualizada mensalmente com base em dados coletados de revendedores, concessionárias, leilões e outras fontes confiáveis. A atualização da Tabela FIPE é realizada com o objetivo de garantir que as informações fornecidas sejam precisas e atualizadas. </p>
+            <h2>Como a Tabela FIPE é atualizada? </h2>
+            <p>A Tabela FIPE é atualizada mensalmente com base em dados coletados de revendedores, concessionárias, leilões e outras fontes confiáveis. A atualização da Tabela FIPE é realizada com o objetivo de garantir que as informações fornecidas sejam precisas e atualizadas. </p>
 
-          <h2>Por que a Tabela FIPE é importante? </h2>
-          <p>A Tabela FIPE é importante porque fornece informações precisas e atualizadas sobre preços de bens de consumo no Brasil. Além disso, a Tabela FIPE é amplamente utilizada como referência para avaliar o valor de compra e venda de bens, o que ajuda a garantir transações justas e equilibradas.
-            É uma ferramenta valiosa para quem deseja avaliar o valor de bens de consumo no Brasil. Com informações precisas e atualizadas, a Tabela FIPE ajuda a garantir transações justas e equilibradas no mercado de bens de consumo. Além disso, usar a Tabela FIPE é simples e fácil, tornando-a uma ferramenta acessível para todos. </p>
+            <h2>Por que a Tabela FIPE é importante? </h2>
+            <p>A Tabela FIPE é importante porque fornece informações precisas e atualizadas sobre preços de bens de consumo no Brasil. Além disso, a Tabela FIPE é amplamente utilizada como referência para avaliar o valor de compra e venda de bens, o que ajuda a garantir transações justas e equilibradas.
+              É uma ferramenta valiosa para quem deseja avaliar o valor de bens de consumo no Brasil. Com informações precisas e atualizadas, a Tabela FIPE ajuda a garantir transações justas e equilibradas no mercado de bens de consumo. Além disso, usar a Tabela FIPE é simples e fácil, tornando-a uma ferramenta acessível para todos. </p>
 
-        </article>
-      </section>
-    </div>
+          </article>
+        </section>
+      </div>
 
-  </React.Fragment>
+    </React.Fragment>
+  );
 }

@@ -1,4 +1,23 @@
 #robots.txt gerado em
 #rocktools.com.br/gerador-robots-txt.html 
 Sitemap: https://tabelafipe.blog.br/sitemap.xml
-User-agent: * 
+User-agent: *
+Allow:
+
+User-agent: Googlebot
+Allow: 
+
+User-agent: Googlebot-Image
+Allow: 
+
+User-agent: Mediapartners-Google
+Allow: 
+
+User-agent: Adsbot-Google
+Allow:
+
+User-agent: Googlebot-News
+Allow:
+
+User-agent: Googlebot-Video
+Allow:

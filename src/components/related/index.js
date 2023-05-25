@@ -27,9 +27,11 @@ export default function Related({ codigoMesReferencia, tipoVeiculo, codigoMarca,
 
                     {
                         listaRelated && listaRelated.map(r => {
-                            return <Link key={r.codigoAno} href={r.URL}>
-                                <a className="link">{r.labelMarca} &nbsp;{r.labelModelo} &nbsp;{r.labelAno}&nbsp; </a>
-                            </Link>
+                            return (
+                                <Link key={r.codigoAno} href={r.URL} className="link">
+                                    {r.labelMarca} &nbsp;{r.labelModelo} &nbsp;{r.labelAno}&nbsp; 
+                                </Link>
+                            );
                         })
                     }
 

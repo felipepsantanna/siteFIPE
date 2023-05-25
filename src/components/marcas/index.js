@@ -29,7 +29,7 @@ export default function Marcas({ labelTipoVeiculo, listaMarcaVeiculo, UmUmaLabel
                             {
                                 listaMarcaVeiculo && listaMarcaVeiculo.map(m => {
                                     return <div key={m.Value} className="marca">
-                                        <Link href={"/" + labelTipoVeiculo + "/" + Helper.NormalizeURL(m.Label)}>
+                                        <Link href={"/" + labelTipoVeiculo + "/" + Helper.NormalizeURL(m.Label)} legacyBehavior>
                                             <a>
                                                 <div className="all">
                                                     <div>
