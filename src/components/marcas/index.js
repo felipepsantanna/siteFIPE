@@ -37,13 +37,14 @@ export default function Marcas({ labelTipoVeiculo, listaMarcaVeiculo, UmUmaLabel
                                                         <Image
                                                             src={ImageHelper.LogoDasMarcas(m.Value, labelTipoVeiculo)}
                                                             alt={m.Label}
-                                                            width={96}
-                                                            height={96}
+                                                            width={104}
+                                                            height={104}
                                                         />
 
                                                     </div>
 
-                                                    <p className="jss1170 jss2247">{m.Label}</p>
+                                                    <p className="jss1170 jss2247">Tabela Fipe&nbsp; 
+                                                    {m.Label}</p>
                                                 </div>
                                             </a>
                                         </Link>

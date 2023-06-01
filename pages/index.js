@@ -154,12 +154,12 @@ export default function Home() {
             </div>
 
             <h1 className="h1">Tabela Fipe</h1>
-            <h2 className="h2">Consulte o valor de um automóvel de forma gratuita</h2>
+            <h2 className="h2">Consulte quanto o seu veículo novo, seminovo ou usado vale na Tabela FIPE</h2>
 
 
 
             <div className="box">
-              <p className="h2">Qual veículo você gostaria de comprar ou vender?</p>
+              <p className="h2">Qual veículo você gostaria de saber o preço?</p>
               <div className="tipoVeiculo">
                 <div className="MuiButtonBase-root MuiChip-root button MuiChip-colorSecondary MuiChip-clickableColorSecondary MuiChip-clickable" role="button" onClick={(e) => onClickTiposVeiculos(e)} data-value="1">
                   <span className="MuiChip-label">Carro</span>
