@@ -139,7 +139,7 @@ export default function Home() {
 
   return (
     <React.Fragment>
-      <Head title="Tabela FIPE: Preços de carros novos e usados" description="Tabela FIPE atualizada até Junho de 2022. Consulte carros, motos e caminhões por marca, modelo e ano. Veja os valores dos anos anteriores." />
+      <Head title="Tabela FIPE: Preços de carros novos e usados" description="Tabela Fipe ✓ Veja o preço atual com gráfico de análise de todos os anos no tabelafipe.blog.br!" />
       <Header />
 
       <div id="section-wrapper" className="sectionWrapper">
