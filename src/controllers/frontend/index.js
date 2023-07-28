@@ -36,6 +36,7 @@ export default class Index {
 
     async getMarcas(codigoMesReferencia, codigoTipoVeiculo) {
         var urlAPI = new URL(`${this.url}Marcas?mesReferencia=${codigoMesReferencia}&tipoVeiculo=${codigoTipoVeiculo}`);
+        console.log(urlAPI);
         const _marcas = await fetch(urlAPI)
             .then(response => {
                 return response.json();

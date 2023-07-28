@@ -7,20 +7,33 @@ import Helper from '/src/controllers/helper';
 
 
 export async function getServerSideProps(context) {
-  console.log(context);
 
+
+  const api = new Api();
+  await api.getMesReferencia();
+
+  await api.getMarcas(api.mesReferencia.Codigo, 1);
+
+  const mesReferenciaReceived = api.mesReferencia;
+  const marcasReceived = api.marcas;
+  return {
+    props: {
+      marcasReceived,
+      mesReferenciaReceived
+    }
+  }
 }
 
-export default function Home() {
+export default function Home({ marcasReceived, mesReferenciaReceived }) {
 
-  const [mesReferencia, setMesReferencia] = useState();
+  const [mesReferencia, setMesReferencia] = useState(mesReferenciaReceived);
   const [tipoVeiculo, setTipoVeiculo] = useState(1);
   const [marcaVeiculo, setMarcaVeiculo] = useState(0);
   const [modeloVeiculo, setModeloVeiculo] = useState(0);
   const [anoVeiculo, setAnoVeiculo] = useState(0);
   const [urlFIPE, setUrlFIPE] = useState("/");
 
-  const [listaMarcaVeiculo, setListaMarcaVeiculo] = useState();
+  const [listaMarcaVeiculo, setListaMarcaVeiculo] = useState(marcasReceived);
   const [listaModeloVeiculo, setListaModeloVeiculo] = useState();
   const [listaAnoVeiculo, setListaAnoVeiculo] = useState();
 
@@ -192,11 +205,9 @@ export default function Home() {
               </select>
             </div>
             <div className="consultarPrecos">
-              <Link href={urlFIPE}>
-                <a id="btnConsultarPreco" className="MuiButtonBase-root MuiButton-root jss290 MuiButton-contained jss291 MuiButton-fullWidth Mui-disabled" type="button" >
-                  <span className="MuiButton-label">Consultar preço</span>
-                  <span className="MuiTouchRipple-root"></span>
-                </a>
+              <Link href={urlFIPE} id="btnConsultarPreco" className="MuiButtonBase-root MuiButton-root jss290 MuiButton-contained jss291 MuiButton-fullWidth Mui-disabled" type="button">
+                <span className="MuiButton-label">Consultar preço</span>
+                <span className="MuiTouchRipple-root"></span>
               </Link>
             </div>
           </div>
@@ -207,16 +218,16 @@ export default function Home() {
           <div className="consulte-tambem">
             <p className="por">Consulte também por:</p>
             <div className="links">
-              <Link href="/carros">
-                <a className="link">Tabela Fipe Carros </a>
+              <Link href="/carros" className="link">
+                Tabela Fipe Carros
               </Link>
               <p className="espacos">,</p>
-              <Link href="/motos">
-                <a className="link">Tabela Fipe Motos </a>
+              <Link href="/motos" className="link">
+                Tabela Fipe Motos
               </Link>
               <p className="espacos">&nbsp;e</p>
-              <Link href="/caminhoes">
-                <a className="link">Tabela Fipe Caminhões </a>
+              <Link href="/caminhoes" className="link">
+                Tabela Fipe Caminhões
               </Link>
             </div>
           </div>
