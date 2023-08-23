@@ -16,6 +16,10 @@ export default function Header() {
                         </svg>
 
                     </Link>
+
+                    <Link href="contato">
+                        contato
+                    </Link>
                 </header>
             </div>
         </React.Fragment>
