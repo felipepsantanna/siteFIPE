@@ -431,13 +431,12 @@ select {
 
 /* INICIO: EFEITO COM O BOTÃO CONSULTAR PREÇOS*/
 .MuiButton-contained.Mui-disabled {
-    color: rgba(0, 0, 0, 0.26);
     box-shadow: none;
     background-color: rgba(0, 0, 0, 0.12);
 }
 
 .MuiButton-root.Mui-disabled {
-    color: rgba(0, 0, 0, 0.26);
+    color: #fff;
 }
 
 .MuiButtonBase-root.Mui-disabled {
@@ -504,13 +503,8 @@ button:disabled {
 }
 
 .MuiButton-contained.Mui-disabled {
-    color: rgba(0, 0, 0, 0.26);
     box-shadow: none;
     background-color: rgba(0, 0, 0, 0.12);
-}
-
-.MuiButton-root.Mui-disabled {
-    color: rgba(0, 0, 0, 0.26);
 }
 
 .MuiButtonBase-root.Mui-disabled {
@@ -566,6 +560,8 @@ button:disabled {
     flex-wrap: wrap;
     align-items: center;
     font-weight: 500;
+    font-style: italic;
+    letter-spacing: 0.05em;
 }
 
 .consulte-tambem .links .espacos {

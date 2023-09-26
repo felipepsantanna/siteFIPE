@@ -218,15 +218,15 @@ export default function Home({ marcasReceived, mesReferenciaReceived }) {
           <div className="consulte-tambem">
             <p className="por">Consulte também por:</p>
             <div className="links">
-              <Link href="/carros" className="link">
+              <Link href="/carros" className="link" aria-label="Tabela Fipe Carros" title="Tabela Fipe Carros">
                 Tabela Fipe Carros
               </Link>
               <p className="espacos">,</p>
-              <Link href="/motos" className="link">
+              <Link href="/motos" className="link" aria-label="Tabela Fipe Carros" title="Tabela Fipe Motos">
                 Tabela Fipe Motos
               </Link>
               <p className="espacos">&nbsp;e</p>
-              <Link href="/caminhoes" className="link">
+              <Link href="/caminhoes" className="link" aria-label="Tabela Fipe Carros" title="Tabela Fipe Caminhões">
                 Tabela Fipe Caminhões
               </Link>
             </div>
