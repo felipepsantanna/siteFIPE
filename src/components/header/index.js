@@ -8,7 +8,7 @@ export default function Header() {
 
             <div id="header-wrapper" className="headerWrapper">
                 <header className="header">
-                    <Link href="/" className="svgRoot-link" aria-label="logo do site tabelafipe.blog.br" title="logo do site tabelafipe.blog.br">
+                    <Link href="https://tabelafipe.blog.br" className="svgRoot-link" aria-label="logo do site tabelafipe.blog.br" title="logo do site tabelafipe.blog.br">
 
                         <svg className="MuiSvgIcon-root" focusable="false" viewBox="0 0 165 22" aria-hidden="true">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">

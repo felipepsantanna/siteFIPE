@@ -26,6 +26,7 @@ export default class Index {
                 return response.json();
             })
             .then(json => {
+
                 this.mesReferencia = json[0];
             })
             .catch((error) => {

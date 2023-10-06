@@ -11,7 +11,7 @@ export async function getServerSideProps(context) {
 
     const tipoVeiculo = Helper.IDTipoVeiculo(context.params.tipoveiculo);
     if (typeof tipoVeiculo === 'undefined') {
-        return { // <-----------------does the trick here!!
+        return {
             notFound: true
         }
     }
@@ -55,14 +55,6 @@ export default function TipoVeiculo({ tipoVeiculo, labelTipoVeiculo, LabelSingul
     const [disabledAnoVeiculo, setDisabledAnoVeiculo] = useState(true);
 
     const [allItens, setAllItens] = useState();
-
-
-    useEffect(() => {
-
-        setListaMarcaVeiculo(marcas);
-
-
-    }, []);
 
     const clean = async (e) => {
         setDisabledModeloVeiculo(true);
@@ -144,9 +136,9 @@ export default function TipoVeiculo({ tipoVeiculo, labelTipoVeiculo, LabelSingul
                         <nav className="MuiTypography-root MuiBreadcrumbs-root MuiTypography-body1 MuiTypography-colorTextSecondary">
                             <ol className="MuiBreadcrumbs-ol">
                                 <li className="MuiBreadcrumbs-li">
-                                    <Link href="/" legacyBehavior>
+                                    <Link href="https://tabelafipe.blog.br" legacyBehavior>
                                         <a>
-                                            <div className="breadcrumb-inicio">Tabela Fipe</div>
+                                            <div className="breadcrumb-links">Tabela Fipe</div>
                                         </a>
                                     </Link>
                                 </li>
@@ -213,7 +205,7 @@ export default function TipoVeiculo({ tipoVeiculo, labelTipoVeiculo, LabelSingul
                     </article>
                 </section>
 
-                <Marcas labelTipoVeiculo={labelTipoVeiculo} listaMarcaVeiculo={listaMarcaVeiculo} UmUmaLabelTipoVeiculo={Helper.UmUmaLabelTipoVeiculo(tipoVeiculo)} LabelSingulgarTipoVeiculo={LabelSingulgarTipoVeiculo}/>
+                <Marcas labelTipoVeiculo={labelTipoVeiculo} listaMarcaVeiculo={listaMarcaVeiculo} UmUmaLabelTipoVeiculo={Helper.UmUmaLabelTipoVeiculo(tipoVeiculo)} LabelSingulgarTipoVeiculo={LabelSingulgarTipoVeiculo} />
             </div>
 
 

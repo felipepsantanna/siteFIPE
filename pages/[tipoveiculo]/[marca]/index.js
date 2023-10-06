@@ -20,9 +20,9 @@ export default function AnoCombustivel({ marca }) {
                     <nav className="MuiTypography-root MuiBreadcrumbs-root MuiTypography-body1 MuiTypography-colorTextSecondary">
                         <ol className="MuiBreadcrumbs-ol">
                             <li className="MuiBreadcrumbs-li">
-                                <Link href="/" legacyBehavior>
+                                <Link href="https://tabelafipe.blog.br" legacyBehavior>
                                     <a>
-                                        <div className="breadcrumb-inicio">Início</div>
+                                        <div className="breadcrumb-links">Tabela Fipe</div>
                                     </a>
                                 </Link>
                             </li>
