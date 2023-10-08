@@ -22,8 +22,8 @@ export default function AnoCombustivel({ fipe, chartData }) {
                         <nav className="MuiTypography-root MuiBreadcrumbs-root MuiTypography-body1 MuiTypography-colorTextSecondary">
                             <ol className="MuiBreadcrumbs-ol">
                                 <li className="MuiBreadcrumbs-li">
-                                    <Link href="/" legacyBehavior>
-                                            <div className="breadcrumb-inicio">Início</div>
+                                    <Link href="https://tabelafipe.blog.br" legacyBehavior>
+                                        <div className="breadcrumb-links">Tabela Fipe</div>
                                     </Link>
                                 </li>
                                 <li aria-hidden="true" className="MuiBreadcrumbs-separator">/</li>
@@ -31,7 +31,7 @@ export default function AnoCombustivel({ fipe, chartData }) {
                                     <Link
                                         href={"/" + Helper.LabelTipoVeiculoURL(fipe.tipoVeiculo).toLowerCase()}
                                         legacyBehavior>
-                                            <div className="breadcrumb-links">{Helper.LabelTipoVeiculo(fipe.tipoVeiculo)}</div>
+                                        <div className="breadcrumb-links">{Helper.LabelTipoVeiculo(fipe.tipoVeiculo)}</div>
                                     </Link>
                                 </li>
                                 <li aria-hidden="true" className="MuiBreadcrumbs-separator">/</li>
@@ -39,7 +39,7 @@ export default function AnoCombustivel({ fipe, chartData }) {
                                     <Link
                                         href={"/" + Helper.LabelTipoVeiculoURL(fipe.tipoVeiculo).toLowerCase() + "/" + Helper.NormalizeURL(fipe.labelMarca).toLowerCase()}
                                         legacyBehavior>
-                                            <div className="breadcrumb-links">{fipe.labelMarca}</div>
+                                        <div className="breadcrumb-links">{fipe.labelMarca}</div>
                                     </Link>
                                 </li>
                                 <li aria-hidden="true" className="MuiBreadcrumbs-separator">/</li>
@@ -47,7 +47,7 @@ export default function AnoCombustivel({ fipe, chartData }) {
                                     <Link
                                         href={"/" + Helper.LabelTipoVeiculoURL(fipe.tipoVeiculo).toLowerCase() + "/" + Helper.NormalizeURL(fipe.labelMarca).toLowerCase() + "/" + Helper.NormalizeURL(fipe.labelModelo).toLowerCase()}
                                         legacyBehavior>
-                                            <div className="breadcrumb-links">{fipe.labelModelo}</div>
+                                        <div className="breadcrumb-links">{fipe.labelModelo}</div>
                                     </Link>
                                 </li>
                                 <li aria-hidden="true" className="MuiBreadcrumbs-separator">/</li>
@@ -88,7 +88,7 @@ export async function getServerSideProps(context) {
     if (api.Fipe === null || api.Fipe.length == 0) {
         return {
             notFound: true // Return the notFound property to trigger a 404 response
-          };
+        };
     }
 
 
