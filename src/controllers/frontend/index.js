@@ -14,7 +14,6 @@ export default class Index {
     related = null;
 
     async getMarcasID(labelTipoVeiculo, marca) {
-
         const found = dbmarcas.find(element => element.tipo.toUpperCase() == labelTipoVeiculo.toUpperCase() && (element.Label.toUpperCase() == marca.replace('-', ' ').toUpperCase() || element.Url.toUpperCase() == marca.toUpperCase()));
         return found;
     }
