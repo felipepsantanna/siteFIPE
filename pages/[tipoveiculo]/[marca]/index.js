@@ -63,9 +63,15 @@ export default function AnoCombustivel({ marca }) {
 
 
 export async function getServerSideProps(context) {
-
     const api = new Api();
     const marca = await api.getMarcasID(context.params.tipoveiculo, context.params.marca);
+
+    if(!marca || typeof tipoVeiculo === 'marca')
+    {
+        return {
+            notFound: true
+        }
+    }
 
     return {
         props: {
