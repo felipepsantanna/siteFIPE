@@ -3,8 +3,8 @@ import dbmarcas from '/src/db/marcas.json';
 export default class Index {
 
     mesReferencia = {
-        "Codigo": 292,
-        "Mes": "Dezembro/2022 "
+        "Codigo": 302,
+        "Mes": "Outubro/2023 "
     };
     url = 'https://api.rocktools.com.br/Fipe/';
     //url = " https://localhost:44328/Fipe/";
@@ -51,6 +51,7 @@ export default class Index {
 
     async getModelos(codigoMesReferencia, codigoTipoVeiculo, codigoMarca) {
         var urlAPI = new URL(`${this.url}Modelos?mesReferencia=${codigoMesReferencia}&tipoVeiculo=${codigoTipoVeiculo}&codigoMarca=${codigoMarca}`);
+       console.log(urlAPI);
         const _modelos = await fetch(urlAPI)
             .then(response => {
                 return response.json();

@@ -1,20 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Api from '/src/controllers/frontend';
-import Helper from '/src/controllers/helper';
 
-export default function Modelos({ marca }) {
-    const [listaModelos, setListaModelos] = useState(null);
-    useEffect(() => {
-        async function loadModelos() {
-            const api = new Api();
-            const IDtipoVeiculo = Helper.IDTipoVeiculo(marca.tipo);
-            await api.getModelos(api.mesReferencia.Codigo, IDtipoVeiculo, marca.Value);
-            setListaModelos(api.modelos);
-        }
-
-        loadModelos();
-    }, []);
+export default function Modelos({ listaModelos }) {
+    
 
 
     return (

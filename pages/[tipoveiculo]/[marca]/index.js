@@ -5,8 +5,10 @@ import Api from '/src/controllers/frontend';
 import Modelos from '/src/components/modelos';
 import Head from '/src/components/head';
 import Header from '/src/components/header';
+import Helper from '/src/controllers/helper';
 
-export default function AnoCombustivel({ marca }) {
+export default function AnoCombustivel({ marca, listaModelos }) {
+
     return <React.Fragment>
 
         <Head title={"Tabela Fipe " + marca.Label} description={"Consulte o preço de carros novos e usados da " + marca.Label} />
@@ -53,7 +55,7 @@ export default function AnoCombustivel({ marca }) {
                     <h1 className="h1">Tabela Fipe {marca.Label} </h1>
                     <h2 className="h2">Consulte o preço de {marca.tipo} novos e usados da {marca.Label}</h2>
 
-                    <Modelos marca={marca} />
+                    <Modelos listaModelos={listaModelos} />
 
                 </article>
             </section>
@@ -73,9 +75,14 @@ export async function getServerSideProps(context) {
         }
     }
 
+    const IDtipoVeiculo = Helper.IDTipoVeiculo(marca.tipo);
+    await api.getModelos(api.mesReferencia.Codigo, IDtipoVeiculo, marca.Value);
+    const listaModelos = api.modelos;
+
     return {
         props: {
-            marca
+            marca,
+            listaModelos
         }
     }
 
