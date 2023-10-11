@@ -124,16 +124,6 @@ svg:not(:root) {
 }
 
 .article-search .box {
-    /*display: flex;
-    box-shadow: rgb(0 0 0 / 16%) 0px 1px 2px, rgb(0 0 0 / 10%) 0px 1px 2px;
-    box-sizing: border-box;
-    align-items: center;
-    border-radius: 4px;
-    flex-direction: column;
-    background-color: rgb(255, 255, 255);
-    width: 771px;
-    margin: 16px auto 0px;
-    padding: 32px 50px;*/
     display: flex;
     z-index: 199;
     position: relative;
@@ -259,6 +249,9 @@ ol {
     margin-top: 24px;
 }
 
+.pl-16{
+    padding-left: 16px;
+}
 /*INICIO: dropboxes*/
 
 .form-control {

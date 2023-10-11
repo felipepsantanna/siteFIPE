@@ -8,7 +8,7 @@ import Helper from '/src/controllers/helper';
 import Grafico from '/src/components/chart';
 
 
-export default function AnoCombustivel({ fipe, chartData }) {
+export default function AnoCombustivel({ fipe, chartData, listRelated }) {
     return (
         <React.Fragment>
             <Head title={"Tabela Fipe " + fipe.labelMarca + " " + fipe.labelModelo + " " + fipe.labelAno} description={"Na Tabela FIPE do " + fipe.labelMarca + " " + fipe.labelModelo + " " + fipe.labelAno + " você pode consultar de maneira rápida e prática preços de " + fipe.labelMarca + " novos e usados. Confira já!"} />
@@ -70,7 +70,7 @@ export default function AnoCombustivel({ fipe, chartData }) {
 
                 <Grafico chartData={chartData} />
 
-                <Related codigoMesReferencia={fipe.codigoMesReferencia} tipoVeiculo={fipe.tipoVeiculo} codigoMarca={fipe.codigoMarca} codigoModelo={fipe.codigoModelo} codigoAno={fipe.codigoAno}></Related>
+                <Related title={fipe.labelMarca + ' ' + fipe.labelModelo} lista={listRelated}></Related>
 
             </div>
         </React.Fragment>
@@ -105,10 +105,15 @@ export async function getServerSideProps(context) {
             }
         ]
     };
+
+    await api.getRelated(fipe.codigoMesReferencia, fipe.tipoVeiculo, fipe.codigoMarca, fipe.codigoModelo, fipe.codigoAno);
+    const listRelated = api.related;
+
     return {
         props: {
             fipe,
-            chartData
+            chartData,
+            listRelated
         }
     }
 }
