@@ -13,8 +13,8 @@ export default class Index {
     Fipe = null;
     related = null;
 
-    async getMarcasID(labelTipoVeiculo, marca) {
-        const found = dbmarcas.find(element => element.tipo.toUpperCase() == labelTipoVeiculo.toUpperCase() && (element.Label.toUpperCase() == marca.replace('-', ' ').toUpperCase() || element.Url.toUpperCase() == marca.toUpperCase()));
+    async getMarcasID(resolvedUrl) {
+        const found = dbmarcas.find(element => element.Url.toLowerCase() == resolvedUrl.toLowerCase());
         return found;
     }
     async getMesReferencia() {
@@ -50,7 +50,6 @@ export default class Index {
 
     async getModelos(codigoMesReferencia, codigoTipoVeiculo, codigoMarca) {
         var urlAPI = new URL(`${this.url}Modelos?mesReferencia=${codigoMesReferencia}&tipoVeiculo=${codigoTipoVeiculo}&codigoMarca=${codigoMarca}`);
-       console.log(urlAPI);
         const _modelos = await fetch(urlAPI)
             .then(response => {
                 return response.json();

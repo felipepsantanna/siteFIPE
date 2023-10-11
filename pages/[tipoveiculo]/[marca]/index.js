@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import Api from '/src/controllers/frontend';
 import Modelos from '/src/components/modelos';
 import Head from '/src/components/head';
@@ -66,16 +65,14 @@ export default function AnoCombustivel({ marca, listaModelos }) {
 
 export async function getServerSideProps(context) {
     const api = new Api();
-    const marca = await api.getMarcasID(context.params.tipoveiculo, context.params.marca);
-
-    if(!marca || typeof tipoVeiculo === 'marca')
+    const marca = await api.getMarcasID(context.resolvedUrl);
+    if(!marca || typeof marca === 'undefined')
     {
         return {
             notFound: true
         }
     }
-
-    const IDtipoVeiculo = Helper.IDTipoVeiculo(marca.tipo);
+    const IDtipoVeiculo = Helper.IDTipoVeiculo(marca.Tipo);
     await api.getModelos(api.mesReferencia.Codigo, IDtipoVeiculo, marca.Value);
     const listaModelos = api.modelos;
 
