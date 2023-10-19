@@ -7,8 +7,7 @@ import Helper from '/src/controllers/helper';
 
 
 export async function getServerSideProps(context) {
-
-
+  const url = "https://tabelafipe.blog.br";
   const api = new Api();
   await api.getMesReferencia();
 
@@ -19,12 +18,13 @@ export async function getServerSideProps(context) {
   return {
     props: {
       marcasReceived,
-      mesReferenciaReceived
+      mesReferenciaReceived,
+      url
     }
   }
 }
 
-export default function Home({ marcasReceived, mesReferenciaReceived }) {
+export default function Home({ marcasReceived, mesReferenciaReceived, url }) {
 
   const [mesReferencia, setMesReferencia] = useState(mesReferenciaReceived);
   const [tipoVeiculo, setTipoVeiculo] = useState(1);
@@ -141,7 +141,11 @@ export default function Home({ marcasReceived, mesReferenciaReceived }) {
 
 
   return <React.Fragment>
-    <Head title="Tabela FIPE: Preços de carros novos e usados" description="Tabela FIPE atualizada até Junho de 2022. Consulte carros, motos e caminhões por marca, modelo e ano. Veja os valores dos anos anteriores." />
+    <Head
+      title="Tabela FIPE: Preços de carros novos e usados"
+      description="Tabela FIPE atualizada até Outubro de 2022. Consulte carros, motos e caminhões por marca, modelo e ano. Veja os valores dos anos anteriores."
+      url={url}
+    />
     <Header />
 
     <div id="section-wrapper" className="sectionWrapper">

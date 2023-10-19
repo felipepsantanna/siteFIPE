@@ -8,10 +8,13 @@ import Helper from '/src/controllers/helper';
 import Grafico from '/src/components/chart';
 
 
-export default function AnoCombustivel({ fipe, chartData, listRelated }) {
+export default function AnoCombustivel({ fipe, chartData, listRelated, url }) {
     return (
         <React.Fragment>
-            <Head title={"Tabela Fipe " + fipe.labelMarca + " " + fipe.labelModelo + " " + fipe.labelAno} description={"Na Tabela FIPE do " + fipe.labelMarca + " " + fipe.labelModelo + " " + fipe.labelAno + " você pode consultar de maneira rápida e prática preços de " + fipe.labelMarca + " novos e usados. Confira já!"} />
+            <Head
+                title={"Tabela Fipe " + fipe.labelMarca + " " + fipe.labelModelo + " " + fipe.labelAno}
+                description={"Na Tabela FIPE do " + fipe.labelMarca + " " + fipe.labelModelo + " " + fipe.labelAno + " você pode consultar de maneira rápida e prática preços de " + fipe.labelMarca + " novos e usados. Confira já!"}
+                url={url} />
             <Header />
 
             <div id="section-wrapper" className="sectionWrapper">
@@ -79,11 +82,9 @@ export default function AnoCombustivel({ fipe, chartData, listRelated }) {
 
 export async function getServerSideProps(context) {
 
-    const url = await Helper.createURL(context.params.tipoveiculo, context.params.marca, context.params.modelo, context.params.anocombustivel)
-
-
+    const url = "https://tabelafipe.blog.br" + context.resolvedUrl;
     const api = new Api();
-    await api.getUrlFipe(url);
+    await api.getUrlFipe(context.resolvedUrl);
 
     if (api.Fipe === null || api.Fipe.length == 0) {
         return {
@@ -109,11 +110,14 @@ export async function getServerSideProps(context) {
     await api.getRelated(fipe.codigoMesReferencia, fipe.tipoVeiculo, fipe.codigoMarca, fipe.codigoModelo, fipe.codigoAno);
     const listRelated = api.related;
 
+
+
     return {
         props: {
             fipe,
             chartData,
-            listRelated
+            listRelated,
+            url
         }
     }
 }

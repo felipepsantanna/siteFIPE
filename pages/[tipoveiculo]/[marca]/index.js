@@ -6,11 +6,14 @@ import Head from '/src/components/head';
 import Header from '/src/components/header';
 import Helper from '/src/controllers/helper';
 
-export default function AnoCombustivel({ marca, listaModelos }) {
+export default function AnoCombustivel({ marca, listaModelos, url }) {
 
     return <React.Fragment>
 
-        <Head title={"Tabela Fipe " + marca.Label} description={"Consulte o preço de carros novos e usados da " + marca.Label} />
+        <Head
+            title={"Tabela Fipe " + marca.Label}
+            description={"Consulte o preço de carros novos e usados da " + marca.Label}
+            url={url} />
         <Header title />
 
         <div id="section-wrapper" className="sectionWrapper">
@@ -66,12 +69,12 @@ export default function AnoCombustivel({ marca, listaModelos }) {
 export async function getServerSideProps(context) {
     const api = new Api();
     const marca = await api.getMarcasID(context.resolvedUrl);
-    if(!marca || typeof marca === 'undefined')
-    {
+    if (!marca || typeof marca === 'undefined') {
         return {
             notFound: true
         }
     }
+    const url = "https://tabelafipe.blog.br" + context.resolvedUrl;
     const IDtipoVeiculo = Helper.IDTipoVeiculo(marca.Tipo);
     await api.getModelos(api.mesReferencia.Codigo, IDtipoVeiculo, marca.Value);
     const listaModelos = api.modelos;
@@ -79,37 +82,9 @@ export async function getServerSideProps(context) {
     return {
         props: {
             marca,
-            listaModelos
+            listaModelos,
+            url
         }
     }
-
-    //await api.getModelos(api.mesReferencia.Codigo, IDtipoVeiculo, 23);
-
-    /* 
-     const labelTipoVeiculo = context.params.tipoveiculo;
-     const labelMarca = context.params.marca;
-     const IDtipoVeiculo = Helper.IDTipoVeiculo(context.params.tipoveiculo);
-     const api = new Api();
-     await api.getModelos(api.mesReferencia.Codigo, IDtipoVeiculo, 23);
-     let listaModelos = [];
-     let auxArr = []
-     if (api.modelos) {
-         for (var i = 0; i < api.modelos.length; i++) {
-             if (!auxArr.includes(api.modelos[i].codigoModelo)) {
-                 auxArr.push(api.modelos[i].codigoModelo);
-                 listaModelos.push(api.modelos[i]);
-             }
-         }
-     }
- 
- 
-     return {
-         props: {
-             IDtipoVeiculo,
-             labelTipoVeiculo,
-             labelMarca,
-             listaModelos
-         }
-     }*/
 }
 

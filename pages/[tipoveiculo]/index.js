@@ -15,6 +15,7 @@ export async function getServerSideProps(context) {
             notFound: true
         }
     }
+    const url = "https://tabelafipe.blog.br" + context.resolvedUrl;
     const labelTipoVeiculo = context.params.tipoveiculo;
     const LabelSingulgarTipoVeiculo = Helper.LabelSingularTipoVeiculo(tipoVeiculo);
 
@@ -32,12 +33,13 @@ export async function getServerSideProps(context) {
             labelTipoVeiculo,
             LabelSingulgarTipoVeiculo,
             baseMesReferencia,
-            marcas
+            marcas,
+            url
         }
     }
 }
 
-export default function TipoVeiculo({ tipoVeiculo, labelTipoVeiculo, LabelSingulgarTipoVeiculo, baseMesReferencia, marcas }) {
+export default function TipoVeiculo({ tipoVeiculo, labelTipoVeiculo, LabelSingulgarTipoVeiculo, baseMesReferencia, marcas, url }) {
     const [mesReferencia, setMesReferencia] = useState(baseMesReferencia);
     const [codigoTipoVeiculo, setCodigoTipoVeiculo] = useState(tipoVeiculo);
     const [marcaVeiculo, setMarcaVeiculo] = useState(0);
@@ -124,7 +126,10 @@ export default function TipoVeiculo({ tipoVeiculo, labelTipoVeiculo, LabelSingul
 
     return (
         <React.Fragment>
-            <Head title={"Tabele FIPE de " + labelTipoVeiculo + ": Preços de " + labelTipoVeiculo + " novos e usados"} description={"Na Tabela FIPE de " + labelTipoVeiculo + " você pode consultar de maneira rápida e prática preços de " + labelTipoVeiculo + " novos e usados. Confira já!"} />
+            <Head
+                title={"Tabele FIPE de " + labelTipoVeiculo + ": Preços de " + labelTipoVeiculo + " novos e usados"}
+                description={"Na Tabela FIPE de " + labelTipoVeiculo + " você pode consultar de maneira rápida e prática preços de " + labelTipoVeiculo + " novos e usados. Confira já!"}
+                url={url} />
             <Header />
 
             <div id="section-wrapper" className="sectionWrapper">
