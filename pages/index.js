@@ -14,17 +14,21 @@ export async function getServerSideProps(context) {
   await api.getMarcas(api.mesReferencia.Codigo, 1);
 
   const mesReferenciaReceived = api.mesReferencia;
+  const arrref = api.mesReferencia.Mes.split("/");
+  const descriptionAnoMes = `${arrref[0]} de ${arrref[1]}`; 
+ 
   const marcasReceived = api.marcas;
   return {
     props: {
       marcasReceived,
       mesReferenciaReceived,
-      url
+      url,
+      descriptionAnoMes
     }
   }
 }
 
-export default function Home({ marcasReceived, mesReferenciaReceived, url }) {
+export default function Home({ marcasReceived, mesReferenciaReceived, url, descriptionAnoMes }) {
 
   const [mesReferencia, setMesReferencia] = useState(mesReferenciaReceived);
   const [tipoVeiculo, setTipoVeiculo] = useState(1);
@@ -143,7 +147,7 @@ export default function Home({ marcasReceived, mesReferenciaReceived, url }) {
   return <React.Fragment>
     <Head
       title="Tabela FIPE: Preços de carros novos e usados"
-      description="Tabela FIPE atualizada até Outubro de 2022. Consulte carros, motos e caminhões por marca, modelo e ano. Veja os valores dos anos anteriores."
+      description={"Tabela FIPE atualizada até " + descriptionAnoMes + ". Consulte carros, motos e caminhões por marca, modelo e ano. Veja os valores dos anos anteriores."}
       url={url}
     />
     <Header />
