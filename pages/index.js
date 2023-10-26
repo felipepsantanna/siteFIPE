@@ -96,10 +96,11 @@ export default function Home({ marcasReceived, mesReferenciaReceived, url, descr
   }
 
   const onMarcasChange = async (e) => {
-
+    
     const newMarcaVeiculo = e.currentTarget.value;
     setMarcaVeiculo(newMarcaVeiculo);
     const api = new Api();
+    
     await api.getModelos(mesReferencia.Codigo, tipoVeiculo, newMarcaVeiculo);
     setAllItens(api.modelos);
 

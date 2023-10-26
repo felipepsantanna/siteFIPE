@@ -203,10 +203,11 @@ ol {
     color: rgb(68, 67, 188);
     height: 26px;
     display: flex;
-    font-size: 12px;
+    font-size: 14px;
     align-items: center;
     font-weight: 400;
     line-height: 17px;
+    cursor: pointer;
 }
 
 /*CSS: BREADCRUMB*/
