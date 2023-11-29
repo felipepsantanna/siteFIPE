@@ -8,13 +8,14 @@ import Helper from '/src/controllers/helper';
 import Grafico from '/src/components/chart';
 
 
-export default function AnoCombustivel({ fipe, chartData, listRelated, url }) {
+export default function AnoCombustivel({ fipe, chartData, listRelated, url, scheme }) {
     return (
         <React.Fragment>
             <Head
                 title={"Tabela Fipe " + fipe.labelMarca + " " + fipe.labelModelo + " " + fipe.labelAno}
                 description={"Na Tabela FIPE do " + fipe.labelMarca + " " + fipe.labelModelo + " " + fipe.labelAno + " você pode consultar de maneira rápida e prática preços de " + fipe.labelMarca + " novos e usados. Confira já!"}
-                url={url} />
+                url={url}
+                scheme={scheme} />
             <Header />
 
             <div id="section-wrapper" className="sectionWrapper">
@@ -91,10 +92,46 @@ export async function getServerSideProps(context) {
             notFound: true // Return the notFound property to trigger a 404 response
         };
     }
+    
 
+    
 
     const fipe = api.Fipe[0];
     const reverseFipe = api.Fipe.reverse();
+    const urlQuebrada = fipe.URL.split('/');
+
+    const positions = {
+        //tipo: carro / moto / caminhão
+        position1: {
+            name: `${Helper.LabelTipoVeiculo(fipe.tipoVeiculo).toLowerCase()}`,
+            id: `/${Helper.LabelTipoVeiculoURL(fipe.tipoVeiculo).toLowerCase()}`
+        },
+        //marca: bmw / ford
+        position2: {
+            name: `${fipe.labelMarca}`,
+            id: `/${urlQuebrada[1]}/${urlQuebrada[2]}`
+        },
+        //modelo: palio weekned
+        position3: {
+            name: `${fipe.labelMarca} ${fipe.labelModelo}`,
+            id: `/${urlQuebrada[1]}/${urlQuebrada[2]}/${urlQuebrada[3]}`
+        },
+        //0km gasolina
+        position4: {
+            name: `Tabela Fipe ${fipe.labelMarca} ${fipe.labelModelo} ${fipe.labelAno}`,
+            id: fipe.URL
+        },
+    };
+
+    console.log(positions);
+
+    const scheme = `{"@context":"http://schema.org",
+                        "@type":"BreadcrumbList",
+                        "itemListElement":[
+                            {"position":1,"@type":"ListItem","item":{"@id":"${positions.position1.id}","${positions.position1.name}":"","image":null}},
+                            {"position":2,"@type":"ListItem","item":{"@id":"${positions.position2.id}","${positions.position2.name}":"","image":null}},
+                            {"position":3,"@type":"ListItem","item":{"@id":"${positions.position3.id}","${positions.position3.name}":"","image":null}},
+                            {"position":4,"@type":"ListItem","item":{"@id":"${positions.position4.id}","name":"${positions.position4.name}","image":null}}]}`;
 
     const chartData = {
         labels: reverseFipe.map(item => item.mesReferencia),
@@ -117,7 +154,8 @@ export async function getServerSideProps(context) {
             fipe,
             chartData,
             listRelated,
-            url
+            url,
+            scheme
         }
     }
 }
