@@ -17,6 +17,7 @@ export async function getServerSideProps(context) {
   const arrref = api.mesReferencia.Mes.split("/");
   const descriptionAnoMes = `${arrref[0]} de ${arrref[1]}`; 
  
+  context.res.setHeader('Cache-Control', 'public,max-age=86400');
   const marcasReceived = api.marcas;
   return {
     props: {

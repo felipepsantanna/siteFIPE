@@ -7,7 +7,8 @@ import Head from '/src/components/head';
 import Consulte from '/src/components/consultetambem';
 import Helper from '/src/controllers/helper';
 
-export async function getServerSideProps(context) {
+
+export async function getServerSideProps (context) {
 
     const tipoVeiculo = Helper.IDTipoVeiculo(context.params.tipoveiculo);
     if (typeof tipoVeiculo === 'undefined') {
@@ -18,7 +19,7 @@ export async function getServerSideProps(context) {
     const url = "https://tabelafipe.blog.br" + context.resolvedUrl;
     const labelTipoVeiculo = context.params.tipoveiculo;
     const LabelSingulgarTipoVeiculo = Helper.LabelSingularTipoVeiculo(tipoVeiculo);
-
+    context.res.setHeader('Cache-Control', 'public,max-age=86400');
     const api = new Api();
     await api.getMesReferencia();
 
