@@ -123,15 +123,7 @@ export async function getServerSideProps(context) {
         },
     };
 
-    console.log(positions);
-
-    const scheme = `{"@context":"http://schema.org",
-                        "@type":"BreadcrumbList",
-                        "itemListElement":[
-                            {"position":1,"@type":"ListItem","item":{"@id":"${positions.position1.id}","${positions.position1.name}":"","image":null}},
-                            {"position":2,"@type":"ListItem","item":{"@id":"${positions.position2.id}","${positions.position2.name}":"","image":null}},
-                            {"position":3,"@type":"ListItem","item":{"@id":"${positions.position3.id}","${positions.position3.name}":"","image":null}},
-                            {"position":4,"@type":"ListItem","item":{"@id":"${positions.position4.id}","name":"${positions.position4.name}","image":null}}]}`;
+    const scheme = `{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"position":1,"@type":"ListItem","item":{"@id":"${positions.position1.id}","${positions.position1.name}":"","image":null}},{"position":2,"@type":"ListItem","item":{"@id":"${positions.position2.id}","${positions.position2.name}":"","image":null}},{"position":3,"@type":"ListItem","item":{"@id":"${positions.position3.id}","${positions.position3.name}":"","image":null}},{"position":4,"@type":"ListItem","item":{"@id":"${positions.position4.id}","name":"${positions.position4.name}","image":null}}]}`;
 
     const chartData = {
         labels: reverseFipe.map(item => item.mesReferencia),
