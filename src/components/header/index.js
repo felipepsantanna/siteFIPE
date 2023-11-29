@@ -17,7 +17,7 @@ export default function Header() {
 
                     </Link>
 
-                    <Link href="contato">
+                    <Link href="/contato">
                         contato
                     </Link>
                 </header>
