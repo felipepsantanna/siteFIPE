@@ -1,17 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <sitemap>
         <loc>https://tabelafipe.blog.br/sitemap.xml</loc>
+        <lastmod>2023-11-30T15:18:22+00:00</lastmod>
+        </sitemap>
+        <sitemap>
         <loc>https://tabelafipe.blog.br/sitemap-carros.xml</loc>
+        <lastmod>2023-11-30T15:18:22+00:00</lastmod>
+        </sitemap>
+        <sitemap>
         <loc>https://tabelafipe.blog.br/sitemap-carros-v1.xml</loc>
+        <lastmod>2023-11-30T15:18:22+00:00</lastmod>
+        </sitemap>
+        <sitemap>
         <loc>https://tabelafipe.blog.br/sitemap-carros-v2.xml</loc>
+        <lastmod>2023-11-30T15:18:22+00:00</lastmod>
+        </sitemap>
+        <sitemap>
         <loc>https://tabelafipe.blog.br/sitemap-carros-v3.xml</loc>
+        <lastmod>2023-11-30T15:18:22+00:00</lastmod>
+        </sitemap>
+        <sitemap>
         <loc>https://tabelafipe.blog.br/sitemap-carros-v4.xml</loc>
+        <lastmod>2023-11-30T15:18:22+00:00</lastmod>
+        </sitemap>
+        <sitemap>
         <loc>https://tabelafipe.blog.br/sitemap-carros-v5.xml</loc>
+        <lastmod>2023-11-30T15:18:22+00:00</lastmod>
+        </sitemap>
+        <sitemap>
         <loc>https://tabelafipe.blog.br/sitemap-carros-v6.xml</loc>
+        <lastmod>2023-11-30T15:18:22+00:00</lastmod>
+        </sitemap>
+        <sitemap>
         <loc>https://tabelafipe.blog.br/sitemap-carros-v7.xml</loc>
+        <lastmod>2023-11-30T15:18:22+00:00</lastmod>
+        </sitemap>
+        <sitemap>
         <loc>https://tabelafipe.blog.br/sitemap-motos.xml</loc>
+        <lastmod>2023-11-30T15:18:22+00:00</lastmod>
+        </sitemap>
+        <sitemap>
         <loc>https://tabelafipe.blog.br/sitemap-caminhoes.xml</loc>
+        <lastmod>2023-11-30T15:18:22+00:00</lastmod>
+        </sitemap>
+        <sitemap>
         <loc>https://tabelafipe.blog.br/sitemap-caminhoes-v1.xml</loc>
+        <lastmod>2023-11-30T15:18:22+00:00</lastmod>
+        </sitemap>
+        <sitemap>
         <loc>https://tabelafipe.blog.br/sitemap-caminhoes-v2.xml</loc>
-    </sitemap>
+        <lastmod>2023-11-30T15:18:22+00:00</lastmod>
+	</sitemap>
 </sitemapindex>
