@@ -87,14 +87,17 @@ export async function getServerSideProps(context) {
     const api = new Api();
     await api.getUrlFipe(context.resolvedUrl);
 
+    /*console.log(context.resolvedUrl);
+    console.log(api.Fipe);*/
+
     if (api.Fipe === null || api.Fipe.length == 0) {
         return {
             notFound: true // Return the notFound property to trigger a 404 response
         };
     }
-    
 
-    
+
+
 
     const fipe = api.Fipe[0];
     const reverseFipe = api.Fipe.reverse();
